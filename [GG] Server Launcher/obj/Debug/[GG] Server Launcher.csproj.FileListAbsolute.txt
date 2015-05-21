@@ -1,0 +1,10 @@
+D:\Desktop\Ongoing projects\[GG] Server Launcher\[GG] Server Launcher\bin\Debug\[GG] Server Launcher.exe
+D:\Desktop\Ongoing projects\[GG] Server Launcher\[GG] Server Launcher\bin\Debug\[GG] Server Launcher.pdb
+D:\Desktop\Ongoing projects\[GG] Server Launcher\[GG] Server Launcher\obj\Debug\[GG] Server Launcher.csprojResolveAssemblyReference.cache
+D:\Desktop\Ongoing projects\[GG] Server Launcher\[GG] Server Launcher\obj\Debug\_GG__Server_Launcher.main.resources
+D:\Desktop\Ongoing projects\[GG] Server Launcher\[GG] Server Launcher\obj\Debug\_GG__Server_Launcher.Properties.Resources.resources
+D:\Desktop\Ongoing projects\[GG] Server Launcher\[GG] Server Launcher\obj\Debug\[GG] Server Launcher.csproj.GenerateResource.Cache
+D:\Desktop\Ongoing projects\[GG] Server Launcher\[GG] Server Launcher\obj\Debug\[GG] Server Launcher.exe
+D:\Desktop\Ongoing projects\[GG] Server Launcher\[GG] Server Launcher\obj\Debug\[GG] Server Launcher.pdb
+C:\Users\John\Documents\GitHub\GG-Launcher\[GG] Server Launcher\obj\Debug\[GG] Server Launcher.exe
+C:\Users\John\Documents\GitHub\GG-Launcher\[GG] Server Launcher\obj\Debug\[GG] Server Launcher.pdb

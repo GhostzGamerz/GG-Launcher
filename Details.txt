@@ -1,0 +1,21 @@
+Main Page:
+Display Latest News from http://ghostzgamerz.com/forums/breaking-news.118/
+Servers Page:
+3 Servers to display (for now) with players, Live Uptime, Join Button.
+Server 1 Information : http://www.gametracker.com/server_info/us.ghostzgamerz.com:3302/
+Server 2 Information : http://www.gametracker.com/server_info/us.ghostzgamerz.com:2322/
+Server 3 Information : http://www.gametracker.com/server_info/us.ghostzgamerz.com:2342/
+Download Page :
+Download 3 Mods (for now). Preferably 2 Download methods - HTTP, Torrent
+John-Software Developer: that's all for now?
+I don't have the link for the 3 mods
+Trying to find it
+here is the list of mods and there downloads - https://mega.co.nz/#F!aYsl2RDR!HPhuG90NJBszYK9yMjEUBg
+We would need a download server, wont we ?
+Gr8: Setting Page :
+1. Set your Arma 2 Game path
+2. Set your Arma 2 AO Game path
+3. Windowed/full screen
+4. Open Mod Download Folder
+Footer :
+Links to - Donate, Report Bugs, Forums, Join Teamspeak
