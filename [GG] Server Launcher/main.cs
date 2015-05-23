@@ -8,6 +8,11 @@ using System.Text;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using Microsoft.Win32;
+using System.IO;
+using System.Net;
+using System.Web;
+using System.Text.RegularExpressions;
+using System.Collections;
 
 namespace _GG__Server_Launcher
 {
@@ -42,6 +47,24 @@ namespace _GG__Server_Launcher
         {
             run_ie9();
             webBrowser1.Navigate("http://ghostzgamerz.com/forums/breaking-news.118/");
+
+            try
+            {
+                StreamReader inStream;
+                WebRequest webRequest = WebRequest.Create("http://192.99.38.184/launcher/search_server.php");
+                WebResponse webresponse = webRequest.GetResponse();
+
+                inStream = new StreamReader(webresponse.GetResponseStream());
+                textBox1.Text = inStream.ReadToEnd();
+
+            }
+            catch
+            {
+                MessageBox.Show("No internet connection detected");
+            }
+
+            StringBuilder lineInfo = new StringBuilder();
+            lineInfo.Append(textBox1.Lines.Length.ToString() + "\n");
         }
 
         private void Button2_Click(object sender, EventArgs e)
@@ -79,5 +102,78 @@ namespace _GG__Server_Launcher
             }
             catch { }
         }
+
+        string servername = "[GG] Overpoch Taviana 1.0.5.1 |Coins|SlowZs|Group";
+        private void get_servername()
+        {
+            //WebClient wc = new WebClient();
+            //string htmlString = wc.DownloadString("http://www.gametracker.com/server_info/us.ghostzgamerz.com:3302/");
+            //Match mTitle = Regex.Match(htmlString, @"</span>(.*?)&nbsp;<span class=");
+            //if (mTitle.Success)
+            //{
+            //    servername = mTitle.Groups[1].Value;
+
+                view_listview();
+
+        }
+
+        private void view_listview()
+        {
+            string[] items = { servername /*, ........... */};
+            ListViewItem lvi = new ListViewItem(items);
+            listView1.Items.Add(lvi);
+
+        }
+
+        private void btn_server_Click(object sender, EventArgs e)
+        {
+            listView1.Items.Clear();
+            get_servername();
+
+            webBrowser1.Visible = false;
+        }
+
+        class WebPostRequest
+        {
+            WebRequest theRequest;
+            HttpWebResponse theResponse;
+            ArrayList theQueryData;
+
+            public WebPostRequest(string url)
+            {
+                theRequest = WebRequest.Create(url);
+                theRequest.Method = "POST";
+                theQueryData = new ArrayList();
+            }
+
+            public void Add(string key, string value)
+            {
+                theQueryData.Add(String.Format("{0}={1}", key, HttpUtility.UrlEncode(value)));
+            }
+
+            public string GetResponse()
+            {
+
+                theRequest.ContentType = "application/x-www-form-urlencoded";
+
+                string Parameters = String.Join("&", (String[])theQueryData.ToArray(typeof(string)));
+                theRequest.ContentLength = Parameters.Length;
+
+                StreamWriter sw = new StreamWriter(theRequest.GetRequestStream());
+                sw.Write(Parameters);
+                sw.Close();
+
+                theResponse = (HttpWebResponse)theRequest.GetResponse();
+                StreamReader sr = new StreamReader(theResponse.GetResponseStream());
+                return sr.ReadToEnd();
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            webBrowser1.Visible = true;
+        }
+
+
     }
 }
