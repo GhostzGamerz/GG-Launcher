@@ -60,7 +60,7 @@ namespace _GG__Server_Launcher
             }
             catch
             {
-                MessageBox.Show("No internet connection detected");
+                //MessageBox.Show("No internet connection detected");
             }
 
             StringBuilder lineInfo = new StringBuilder();
@@ -119,7 +119,7 @@ namespace _GG__Server_Launcher
 
         private void view_listview()
         {
-            string[] items = { servername /*, ........... */};
+            string[] items = { servername, "?", "A2-OP" /*, ........... */};
             ListViewItem lvi = new ListViewItem(items);
             listView1.Items.Add(lvi);
 
