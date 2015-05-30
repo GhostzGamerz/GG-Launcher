@@ -13,6 +13,8 @@ using System.Net;
 using System.Web;
 using System.Text.RegularExpressions;
 using System.Collections;
+using System.Threading;
+using System.Diagnostics;
 
 namespace _GG__Server_Launcher
 {
@@ -174,6 +176,35 @@ namespace _GG__Server_Launcher
             webBrowser1.Visible = true;
         }
 
+        private void label4_Click(object sender, EventArgs e)
+        {
+            timer1.Enabled = true;
+        }
+        private void btn_off_Click(object sender, EventArgs e)
+        {
+            
+        }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (panel4.Height > 475) timer1.Enabled = false;
+            else panel4.Height += 10;
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            if (panel4.Height <10) timer2.Enabled = false;
+            else panel4.Height -= 10;
+        }
+
+        private void btn_up_Click(object sender, EventArgs e)
+        {
+            timer2.Enabled = true;
+        }
+
+        private void btn_path_Click(object sender, EventArgs e)
+        {
+            Process.Start(@"c:\windows\");
+        }
     }
 }

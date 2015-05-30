@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(main));
             this.Panel3 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -35,10 +36,10 @@
             this.Button4 = new System.Windows.Forms.Button();
             this.Button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.btn_server = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
-            this.button3 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -46,14 +47,32 @@
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btn_off = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.btn_up = new System.Windows.Forms.PictureBox();
+            this.txtarma1 = new System.Windows.Forms.TextBox();
+            this.txtarma2 = new System.Windows.Forms.TextBox();
+            this.txtarma3 = new System.Windows.Forms.TextBox();
+            this.txtarma4 = new System.Windows.Forms.TextBox();
+            this.txtarma5 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.btn_path = new System.Windows.Forms.Button();
+            this.btn_save = new System.Windows.Forms.Button();
             this.Panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_up)).BeginInit();
             this.SuspendLayout();
             // 
             // Panel3
@@ -126,14 +145,27 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.OrangeRed;
+            this.panel1.BackColor = System.Drawing.Color.SteelBlue;
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.btn_server);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(-1, 32);
+            this.panel1.Location = new System.Drawing.Point(-1, 39);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(751, 32);
             this.panel1.TabIndex = 52;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Silver;
+            this.label4.Location = new System.Drawing.Point(678, 7);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(59, 16);
+            this.label4.TabIndex = 54;
+            this.label4.Text = "Settings";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // btn_server
             // 
@@ -170,19 +202,6 @@
             this.webBrowser1.Size = new System.Drawing.Size(747, 359);
             this.webBrowser1.TabIndex = 53;
             // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Gray;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(-1, 80);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(385, 30);
-            this.button3.TabIndex = 54;
-            this.button3.Text = "Refresh";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
             // comboBox1
             // 
             this.comboBox1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -198,9 +217,9 @@
             "DayZ - SA",
             "MunchieGame",
             "SkyZ"});
-            this.comboBox1.Location = new System.Drawing.Point(390, 84);
+            this.comboBox1.Location = new System.Drawing.Point(-1, 93);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(356, 23);
+            this.comboBox1.Size = new System.Drawing.Size(747, 23);
             this.comboBox1.TabIndex = 55;
             // 
             // listView1
@@ -251,7 +270,7 @@
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.OrangeRed;
+            this.panel2.BackColor = System.Drawing.Color.SteelBlue;
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
@@ -260,6 +279,30 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(751, 32);
             this.panel2.TabIndex = 83;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Silver;
+            this.label6.Location = new System.Drawing.Point(206, 7);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(111, 16);
+            this.label6.TabIndex = 55;
+            this.label6.Text = "Join Teamspeak";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Silver;
+            this.label3.Location = new System.Drawing.Point(149, 7);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(62, 16);
+            this.label3.TabIndex = 54;
+            this.label3.Text = "Forums |";
             // 
             // label2
             // 
@@ -285,41 +328,190 @@
             this.label5.TabIndex = 52;
             this.label5.Text = "Donate |";
             // 
-            // label3
+            // panel4
             // 
-            this.label3.AutoSize = true;
-            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Silver;
-            this.label3.Location = new System.Drawing.Point(149, 7);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 16);
-            this.label3.TabIndex = 54;
-            this.label3.Text = "Forums |";
+            this.panel4.Controls.Add(this.btn_save);
+            this.panel4.Controls.Add(this.btn_path);
+            this.panel4.Controls.Add(this.label12);
+            this.panel4.Controls.Add(this.label11);
+            this.panel4.Controls.Add(this.label10);
+            this.panel4.Controls.Add(this.label9);
+            this.panel4.Controls.Add(this.label8);
+            this.panel4.Controls.Add(this.txtarma5);
+            this.panel4.Controls.Add(this.txtarma4);
+            this.panel4.Controls.Add(this.txtarma3);
+            this.panel4.Controls.Add(this.txtarma2);
+            this.panel4.Controls.Add(this.txtarma1);
+            this.panel4.Controls.Add(this.btn_up);
+            this.panel4.Controls.Add(this.btn_off);
+            this.panel4.Location = new System.Drawing.Point(314, 27);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(434, 10);
+            this.panel4.TabIndex = 84;
             // 
-            // label6
+            // btn_off
             // 
-            this.label6.AutoSize = true;
-            this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Silver;
-            this.label6.Location = new System.Drawing.Point(206, 7);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(111, 16);
-            this.label6.TabIndex = 55;
-            this.label6.Text = "Join Teamspeak";
+            this.btn_off.Location = new System.Drawing.Point(52, 30);
+            this.btn_off.Name = "btn_off";
+            this.btn_off.Size = new System.Drawing.Size(75, 23);
+            this.btn_off.TabIndex = 0;
+            this.btn_off.Text = "Off";
+            this.btn_off.UseVisualStyleBackColor = true;
+            this.btn_off.Visible = false;
+            this.btn_off.Click += new System.EventHandler(this.btn_off_Click);
             // 
-            // label4
+            // timer1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Silver;
-            this.label4.Location = new System.Drawing.Point(678, 7);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 16);
-            this.label4.TabIndex = 54;
-            this.label4.Text = "Settings";
+            this.timer1.Interval = 1;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // timer2
+            // 
+            this.timer2.Interval = 1;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // btn_up
+            // 
+            this.btn_up.Image = ((System.Drawing.Image)(resources.GetObject("btn_up.Image")));
+            this.btn_up.Location = new System.Drawing.Point(14, 10);
+            this.btn_up.Name = "btn_up";
+            this.btn_up.Size = new System.Drawing.Size(32, 32);
+            this.btn_up.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_up.TabIndex = 1;
+            this.btn_up.TabStop = false;
+            this.btn_up.Click += new System.EventHandler(this.btn_up_Click);
+            // 
+            // txtarma1
+            // 
+            this.txtarma1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtarma1.Location = new System.Drawing.Point(14, 89);
+            this.txtarma1.Multiline = true;
+            this.txtarma1.Name = "txtarma1";
+            this.txtarma1.Size = new System.Drawing.Size(408, 33);
+            this.txtarma1.TabIndex = 2;
+            // 
+            // txtarma2
+            // 
+            this.txtarma2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtarma2.Location = new System.Drawing.Point(14, 145);
+            this.txtarma2.Multiline = true;
+            this.txtarma2.Name = "txtarma2";
+            this.txtarma2.Size = new System.Drawing.Size(408, 31);
+            this.txtarma2.TabIndex = 3;
+            // 
+            // txtarma3
+            // 
+            this.txtarma3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtarma3.Location = new System.Drawing.Point(14, 202);
+            this.txtarma3.Multiline = true;
+            this.txtarma3.Name = "txtarma3";
+            this.txtarma3.Size = new System.Drawing.Size(408, 31);
+            this.txtarma3.TabIndex = 4;
+            // 
+            // txtarma4
+            // 
+            this.txtarma4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtarma4.Location = new System.Drawing.Point(14, 260);
+            this.txtarma4.Multiline = true;
+            this.txtarma4.Name = "txtarma4";
+            this.txtarma4.Size = new System.Drawing.Size(408, 31);
+            this.txtarma4.TabIndex = 5;
+            // 
+            // txtarma5
+            // 
+            this.txtarma5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtarma5.Location = new System.Drawing.Point(14, 319);
+            this.txtarma5.Multiline = true;
+            this.txtarma5.Name = "txtarma5";
+            this.txtarma5.Size = new System.Drawing.Size(408, 31);
+            this.txtarma5.TabIndex = 6;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label8.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Silver;
+            this.label8.Location = new System.Drawing.Point(11, 73);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(103, 16);
+            this.label8.TabIndex = 53;
+            this.label8.Text = "ARAMA 2 Path ";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label9.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Silver;
+            this.label9.Location = new System.Drawing.Point(11, 130);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(115, 16);
+            this.label9.TabIndex = 54;
+            this.label9.Text = "ARAMA OA Path ";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label10.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Silver;
+            this.label10.Location = new System.Drawing.Point(11, 185);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(66, 16);
+            this.label10.TabIndex = 55;
+            this.label10.Text = "ARAMA 3";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label11.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Silver;
+            this.label11.Location = new System.Drawing.Point(11, 244);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(142, 16);
+            this.label11.TabIndex = 56;
+            this.label11.Text = "Mods/Download Path";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label12.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Silver;
+            this.label12.Location = new System.Drawing.Point(11, 303);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(119, 16);
+            this.label12.TabIndex = 57;
+            this.label12.Text = "Additional Param";
+            // 
+            // btn_path
+            // 
+            this.btn_path.BackColor = System.Drawing.Color.Gray;
+            this.btn_path.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_path.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_path.ForeColor = System.Drawing.Color.White;
+            this.btn_path.Location = new System.Drawing.Point(288, 368);
+            this.btn_path.Name = "btn_path";
+            this.btn_path.Size = new System.Drawing.Size(134, 29);
+            this.btn_path.TabIndex = 58;
+            this.btn_path.Text = "Open Mod Folder";
+            this.btn_path.UseVisualStyleBackColor = false;
+            this.btn_path.Click += new System.EventHandler(this.btn_path_Click);
+            // 
+            // btn_save
+            // 
+            this.btn_save.BackColor = System.Drawing.Color.Gray;
+            this.btn_save.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_save.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_save.ForeColor = System.Drawing.Color.White;
+            this.btn_save.Location = new System.Drawing.Point(288, 403);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(134, 29);
+            this.btn_save.TabIndex = 59;
+            this.btn_save.Text = "Save";
+            this.btn_save.UseVisualStyleBackColor = false;
             // 
             // main
             // 
@@ -327,12 +519,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(748, 507);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -347,6 +539,9 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_up)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -363,7 +558,6 @@
         internal System.Windows.Forms.Label btn_server;
         internal System.Windows.Forms.Label label1;
         private System.Windows.Forms.WebBrowser webBrowser1;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
@@ -376,6 +570,23 @@
         internal System.Windows.Forms.Label label5;
         internal System.Windows.Forms.Label label4;
         internal System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button btn_off;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.PictureBox btn_up;
+        internal System.Windows.Forms.Label label12;
+        internal System.Windows.Forms.Label label11;
+        internal System.Windows.Forms.Label label10;
+        internal System.Windows.Forms.Label label9;
+        internal System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtarma5;
+        private System.Windows.Forms.TextBox txtarma4;
+        private System.Windows.Forms.TextBox txtarma3;
+        private System.Windows.Forms.TextBox txtarma2;
+        private System.Windows.Forms.TextBox txtarma1;
+        private System.Windows.Forms.Button btn_save;
+        private System.Windows.Forms.Button btn_path;
     }
 }
 
