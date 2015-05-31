@@ -49,7 +49,7 @@ namespace _GG__Server_Launcher
         {
             run_ie9();
             webBrowser1.Navigate("http://ghostzgamerz.com/forums/breaking-news.118/");
-
+            loaad_settings();
             try
             {
                 StreamReader inStream;
@@ -133,6 +133,7 @@ namespace _GG__Server_Launcher
             get_servername();
 
             webBrowser1.Visible = false;
+            comboBox1.Visible = true;
         }
 
         class WebPostRequest
@@ -174,6 +175,7 @@ namespace _GG__Server_Launcher
         private void label1_Click(object sender, EventArgs e)
         {
             webBrowser1.Visible = true;
+            comboBox1.Visible = false;
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -205,6 +207,118 @@ namespace _GG__Server_Launcher
         private void btn_path_Click(object sender, EventArgs e)
         {
             Process.Start(@"c:\windows\");
+        }
+
+        private void btn_save_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //write ini file
+                StreamWriter myStreamWriter = null;
+                string InputString;
+
+                try
+                {
+                    //settings save into text file
+                    InputString =txtarma1.Text + Environment.NewLine;       //1
+                    InputString += txtarma2.Text + Environment.NewLine;
+                    InputString += txtarma3.Text + Environment.NewLine;
+                    InputString += txtarma5.Text + Environment.NewLine; //2
+
+                    myStreamWriter = File.CreateText(Application.StartupPath + @"\config.dat");
+
+                    myStreamWriter.Write(InputString);
+                    myStreamWriter.Flush();
+
+                }
+                catch (Exception exc)
+                {
+                    MessageBox.Show("File could not be created or written to." + Environment.NewLine + "Please verify that the filename is correct, and that you have write permissions for the desired directory." + Environment.NewLine + Environment.NewLine + "Exception: " + exc.Message);
+                }
+                finally
+                {
+                    //dispose the stream writer
+                    if (myStreamWriter != null)
+                    {
+                        myStreamWriter.Close();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void loaad_settings()
+        {
+            StreamReader myStreamReader = null;
+            string OutputString;
+
+            int rowCount = 1;
+
+            try
+            {
+                myStreamReader = File.OpenText(Application.StartupPath + @"\config.dat");
+
+                OutputString = myStreamReader.ReadLine();
+
+                while (OutputString != null)
+                {
+                    switch (rowCount)
+                    {
+                        case 1: txtarma1.Text = OutputString; break;
+                        case 2: txtarma2.Text = OutputString; break;
+                        case 3: txtarma3.Text = OutputString; break;
+                        case 4: txtarma5.Text = OutputString; break;
+                    }
+
+                    rowCount++;
+                    OutputString = myStreamReader.ReadLine();
+                }
+
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show("Setting file could not be read." + Environment.NewLine + "Please verify that the filename is correct, and that you have read permissions for the desired directory." + Environment.NewLine + Environment.NewLine + "Exception: " + exc.Message);
+            }
+            finally
+            {
+                if (myStreamReader != null)
+                {
+                    myStreamReader.Close();
+                }
+            }
+        }
+
+        private void btn_browse1_Click(object sender, EventArgs e)
+        {
+
+            OpenFileDialog op1 = new OpenFileDialog();
+            op1.ShowDialog();
+            op1.Filter="Exe Files (.exe)|*.exe";
+            txtarma1.Text = op1.FileName;
+        }
+
+        private void btn_browse2_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog op1 = new OpenFileDialog();
+            op1.ShowDialog();
+            op1.Filter = "Exe Files (.exe)|*.exe";
+            txtarma2.Text = op1.FileName;
+        }
+
+        private void btn_browse3_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog op1 = new OpenFileDialog();
+            op1.ShowDialog();
+            op1.Filter = "Exe Files (.exe)|*.exe";
+            txtarma3.Text = op1.FileName;
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

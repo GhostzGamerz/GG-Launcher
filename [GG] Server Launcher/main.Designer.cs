@@ -52,22 +52,26 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btn_save = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtarma5 = new System.Windows.Forms.TextBox();
+            this.txtarma3 = new System.Windows.Forms.TextBox();
+            this.txtarma2 = new System.Windows.Forms.TextBox();
+            this.txtarma1 = new System.Windows.Forms.TextBox();
+            this.btn_up = new System.Windows.Forms.PictureBox();
             this.btn_off = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.btn_up = new System.Windows.Forms.PictureBox();
-            this.txtarma1 = new System.Windows.Forms.TextBox();
-            this.txtarma2 = new System.Windows.Forms.TextBox();
-            this.txtarma3 = new System.Windows.Forms.TextBox();
-            this.txtarma4 = new System.Windows.Forms.TextBox();
-            this.txtarma5 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.btn_browse1 = new System.Windows.Forms.Button();
+            this.btn_browse2 = new System.Windows.Forms.Button();
+            this.btn_browse3 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.btn_path = new System.Windows.Forms.Button();
-            this.btn_save = new System.Windows.Forms.Button();
+            this.btn_verify = new System.Windows.Forms.Button();
+            this.btn_verify2 = new System.Windows.Forms.Button();
+            this.btn_update = new System.Windows.Forms.Button();
             this.Panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -221,10 +225,11 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(747, 23);
             this.comboBox1.TabIndex = 55;
+            this.comboBox1.Visible = false;
             // 
             // listView1
             // 
-            this.listView1.BackColor = System.Drawing.Color.LightCoral;
+            this.listView1.BackColor = System.Drawing.Color.SteelBlue;
             this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader2,
@@ -330,15 +335,19 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.btn_save);
-            this.panel4.Controls.Add(this.btn_path);
-            this.panel4.Controls.Add(this.label12);
+            this.panel4.Controls.Add(this.btn_update);
+            this.panel4.Controls.Add(this.btn_verify2);
+            this.panel4.Controls.Add(this.btn_verify);
             this.panel4.Controls.Add(this.label11);
+            this.panel4.Controls.Add(this.btn_browse3);
+            this.panel4.Controls.Add(this.btn_browse2);
+            this.panel4.Controls.Add(this.btn_browse1);
+            this.panel4.Controls.Add(this.btn_save);
+            this.panel4.Controls.Add(this.label12);
             this.panel4.Controls.Add(this.label10);
             this.panel4.Controls.Add(this.label9);
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.txtarma5);
-            this.panel4.Controls.Add(this.txtarma4);
             this.panel4.Controls.Add(this.txtarma3);
             this.panel4.Controls.Add(this.txtarma2);
             this.panel4.Controls.Add(this.txtarma1);
@@ -348,6 +357,115 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(434, 10);
             this.panel4.TabIndex = 84;
+            // 
+            // btn_save
+            // 
+            this.btn_save.BackColor = System.Drawing.Color.Gray;
+            this.btn_save.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_save.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_save.ForeColor = System.Drawing.Color.White;
+            this.btn_save.Location = new System.Drawing.Point(14, 243);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(134, 29);
+            this.btn_save.TabIndex = 59;
+            this.btn_save.Text = "Save";
+            this.btn_save.UseVisualStyleBackColor = false;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Silver;
+            this.label12.Location = new System.Drawing.Point(11, 201);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(86, 13);
+            this.label12.TabIndex = 57;
+            this.label12.Text = "Additional Param";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Silver;
+            this.label10.Location = new System.Drawing.Point(11, 158);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(47, 13);
+            this.label10.TabIndex = 55;
+            this.label10.Text = "ARMA 3";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Silver;
+            this.label9.Location = new System.Drawing.Point(11, 116);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(84, 13);
+            this.label9.TabIndex = 54;
+            this.label9.Text = "ARMA OA Path ";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Silver;
+            this.label8.Location = new System.Drawing.Point(11, 73);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(75, 13);
+            this.label8.TabIndex = 53;
+            this.label8.Text = "ARMA 2 Path ";
+            // 
+            // txtarma5
+            // 
+            this.txtarma5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtarma5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtarma5.Location = new System.Drawing.Point(14, 217);
+            this.txtarma5.Name = "txtarma5";
+            this.txtarma5.Size = new System.Drawing.Size(332, 20);
+            this.txtarma5.TabIndex = 6;
+            // 
+            // txtarma3
+            // 
+            this.txtarma3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtarma3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtarma3.Location = new System.Drawing.Point(14, 175);
+            this.txtarma3.Name = "txtarma3";
+            this.txtarma3.Size = new System.Drawing.Size(332, 20);
+            this.txtarma3.TabIndex = 4;
+            // 
+            // txtarma2
+            // 
+            this.txtarma2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtarma2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtarma2.Location = new System.Drawing.Point(14, 131);
+            this.txtarma2.Name = "txtarma2";
+            this.txtarma2.Size = new System.Drawing.Size(332, 20);
+            this.txtarma2.TabIndex = 3;
+            // 
+            // txtarma1
+            // 
+            this.txtarma1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtarma1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtarma1.Location = new System.Drawing.Point(14, 89);
+            this.txtarma1.Name = "txtarma1";
+            this.txtarma1.Size = new System.Drawing.Size(332, 20);
+            this.txtarma1.TabIndex = 2;
+            // 
+            // btn_up
+            // 
+            this.btn_up.Image = ((System.Drawing.Image)(resources.GetObject("btn_up.Image")));
+            this.btn_up.Location = new System.Drawing.Point(14, 10);
+            this.btn_up.Name = "btn_up";
+            this.btn_up.Size = new System.Drawing.Size(32, 32);
+            this.btn_up.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_up.TabIndex = 1;
+            this.btn_up.TabStop = false;
+            this.btn_up.Click += new System.EventHandler(this.btn_up_Click);
             // 
             // btn_off
             // 
@@ -370,97 +488,47 @@
             this.timer2.Interval = 1;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
-            // btn_up
+            // btn_browse1
             // 
-            this.btn_up.Image = ((System.Drawing.Image)(resources.GetObject("btn_up.Image")));
-            this.btn_up.Location = new System.Drawing.Point(14, 10);
-            this.btn_up.Name = "btn_up";
-            this.btn_up.Size = new System.Drawing.Size(32, 32);
-            this.btn_up.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btn_up.TabIndex = 1;
-            this.btn_up.TabStop = false;
-            this.btn_up.Click += new System.EventHandler(this.btn_up_Click);
+            this.btn_browse1.BackColor = System.Drawing.Color.Gray;
+            this.btn_browse1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_browse1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_browse1.ForeColor = System.Drawing.Color.White;
+            this.btn_browse1.Location = new System.Drawing.Point(352, 89);
+            this.btn_browse1.Name = "btn_browse1";
+            this.btn_browse1.Size = new System.Drawing.Size(70, 20);
+            this.btn_browse1.TabIndex = 60;
+            this.btn_browse1.Text = "Browse";
+            this.btn_browse1.UseVisualStyleBackColor = false;
+            this.btn_browse1.Click += new System.EventHandler(this.btn_browse1_Click);
             // 
-            // txtarma1
+            // btn_browse2
             // 
-            this.txtarma1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtarma1.Location = new System.Drawing.Point(14, 89);
-            this.txtarma1.Multiline = true;
-            this.txtarma1.Name = "txtarma1";
-            this.txtarma1.Size = new System.Drawing.Size(408, 33);
-            this.txtarma1.TabIndex = 2;
+            this.btn_browse2.BackColor = System.Drawing.Color.Gray;
+            this.btn_browse2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_browse2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_browse2.ForeColor = System.Drawing.Color.White;
+            this.btn_browse2.Location = new System.Drawing.Point(352, 131);
+            this.btn_browse2.Name = "btn_browse2";
+            this.btn_browse2.Size = new System.Drawing.Size(70, 20);
+            this.btn_browse2.TabIndex = 61;
+            this.btn_browse2.Text = "Browse";
+            this.btn_browse2.UseVisualStyleBackColor = false;
+            this.btn_browse2.Click += new System.EventHandler(this.btn_browse2_Click);
             // 
-            // txtarma2
+            // btn_browse3
             // 
-            this.txtarma2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtarma2.Location = new System.Drawing.Point(14, 145);
-            this.txtarma2.Multiline = true;
-            this.txtarma2.Name = "txtarma2";
-            this.txtarma2.Size = new System.Drawing.Size(408, 31);
-            this.txtarma2.TabIndex = 3;
-            // 
-            // txtarma3
-            // 
-            this.txtarma3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtarma3.Location = new System.Drawing.Point(14, 202);
-            this.txtarma3.Multiline = true;
-            this.txtarma3.Name = "txtarma3";
-            this.txtarma3.Size = new System.Drawing.Size(408, 31);
-            this.txtarma3.TabIndex = 4;
-            // 
-            // txtarma4
-            // 
-            this.txtarma4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtarma4.Location = new System.Drawing.Point(14, 260);
-            this.txtarma4.Multiline = true;
-            this.txtarma4.Name = "txtarma4";
-            this.txtarma4.Size = new System.Drawing.Size(408, 31);
-            this.txtarma4.TabIndex = 5;
-            // 
-            // txtarma5
-            // 
-            this.txtarma5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtarma5.Location = new System.Drawing.Point(14, 319);
-            this.txtarma5.Multiline = true;
-            this.txtarma5.Name = "txtarma5";
-            this.txtarma5.Size = new System.Drawing.Size(408, 31);
-            this.txtarma5.TabIndex = 6;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label8.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Silver;
-            this.label8.Location = new System.Drawing.Point(11, 73);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(103, 16);
-            this.label8.TabIndex = 53;
-            this.label8.Text = "ARAMA 2 Path ";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label9.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Silver;
-            this.label9.Location = new System.Drawing.Point(11, 130);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(115, 16);
-            this.label9.TabIndex = 54;
-            this.label9.Text = "ARAMA OA Path ";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label10.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Silver;
-            this.label10.Location = new System.Drawing.Point(11, 185);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(66, 16);
-            this.label10.TabIndex = 55;
-            this.label10.Text = "ARAMA 3";
+            this.btn_browse3.BackColor = System.Drawing.Color.Gray;
+            this.btn_browse3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_browse3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_browse3.ForeColor = System.Drawing.Color.White;
+            this.btn_browse3.Location = new System.Drawing.Point(352, 175);
+            this.btn_browse3.Name = "btn_browse3";
+            this.btn_browse3.Size = new System.Drawing.Size(70, 20);
+            this.btn_browse3.TabIndex = 62;
+            this.btn_browse3.Text = "Browse";
+            this.btn_browse3.UseVisualStyleBackColor = false;
+            this.btn_browse3.Click += new System.EventHandler(this.btn_browse3_Click);
             // 
             // label11
             // 
@@ -468,50 +536,51 @@
             this.label11.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label11.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Silver;
-            this.label11.Location = new System.Drawing.Point(11, 244);
+            this.label11.Location = new System.Drawing.Point(11, 325);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(142, 16);
-            this.label11.TabIndex = 56;
-            this.label11.Text = "Mods/Download Path";
+            this.label11.Size = new System.Drawing.Size(41, 16);
+            this.label11.TabIndex = 63;
+            this.label11.Text = "Tools";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
-            // label12
+            // btn_verify
             // 
-            this.label12.AutoSize = true;
-            this.label12.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label12.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Silver;
-            this.label12.Location = new System.Drawing.Point(11, 303);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(119, 16);
-            this.label12.TabIndex = 57;
-            this.label12.Text = "Additional Param";
+            this.btn_verify.BackColor = System.Drawing.Color.Gray;
+            this.btn_verify.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_verify.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_verify.ForeColor = System.Drawing.Color.White;
+            this.btn_verify.Location = new System.Drawing.Point(14, 356);
+            this.btn_verify.Name = "btn_verify";
+            this.btn_verify.Size = new System.Drawing.Size(134, 29);
+            this.btn_verify.TabIndex = 64;
+            this.btn_verify.Text = "Verify Arma 2";
+            this.btn_verify.UseVisualStyleBackColor = false;
             // 
-            // btn_path
+            // btn_verify2
             // 
-            this.btn_path.BackColor = System.Drawing.Color.Gray;
-            this.btn_path.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_path.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_path.ForeColor = System.Drawing.Color.White;
-            this.btn_path.Location = new System.Drawing.Point(288, 368);
-            this.btn_path.Name = "btn_path";
-            this.btn_path.Size = new System.Drawing.Size(134, 29);
-            this.btn_path.TabIndex = 58;
-            this.btn_path.Text = "Open Mod Folder";
-            this.btn_path.UseVisualStyleBackColor = false;
-            this.btn_path.Click += new System.EventHandler(this.btn_path_Click);
+            this.btn_verify2.BackColor = System.Drawing.Color.Gray;
+            this.btn_verify2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_verify2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_verify2.ForeColor = System.Drawing.Color.White;
+            this.btn_verify2.Location = new System.Drawing.Point(14, 391);
+            this.btn_verify2.Name = "btn_verify2";
+            this.btn_verify2.Size = new System.Drawing.Size(134, 29);
+            this.btn_verify2.TabIndex = 65;
+            this.btn_verify2.Text = "Verify Arma OA 2";
+            this.btn_verify2.UseVisualStyleBackColor = false;
             // 
-            // btn_save
+            // btn_update
             // 
-            this.btn_save.BackColor = System.Drawing.Color.Gray;
-            this.btn_save.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_save.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_save.ForeColor = System.Drawing.Color.White;
-            this.btn_save.Location = new System.Drawing.Point(288, 403);
-            this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(134, 29);
-            this.btn_save.TabIndex = 59;
-            this.btn_save.Text = "Save";
-            this.btn_save.UseVisualStyleBackColor = false;
+            this.btn_update.BackColor = System.Drawing.Color.Gray;
+            this.btn_update.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_update.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_update.ForeColor = System.Drawing.Color.White;
+            this.btn_update.Location = new System.Drawing.Point(14, 426);
+            this.btn_update.Name = "btn_update";
+            this.btn_update.Size = new System.Drawing.Size(134, 29);
+            this.btn_update.TabIndex = 66;
+            this.btn_update.Text = "Update Launcher";
+            this.btn_update.UseVisualStyleBackColor = false;
             // 
             // main
             // 
@@ -576,17 +645,21 @@
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.PictureBox btn_up;
         internal System.Windows.Forms.Label label12;
-        internal System.Windows.Forms.Label label11;
         internal System.Windows.Forms.Label label10;
         internal System.Windows.Forms.Label label9;
         internal System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtarma5;
-        private System.Windows.Forms.TextBox txtarma4;
         private System.Windows.Forms.TextBox txtarma3;
         private System.Windows.Forms.TextBox txtarma2;
         private System.Windows.Forms.TextBox txtarma1;
         private System.Windows.Forms.Button btn_save;
-        private System.Windows.Forms.Button btn_path;
+        private System.Windows.Forms.Button btn_browse3;
+        private System.Windows.Forms.Button btn_browse2;
+        private System.Windows.Forms.Button btn_browse1;
+        internal System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button btn_update;
+        private System.Windows.Forms.Button btn_verify2;
+        private System.Windows.Forms.Button btn_verify;
     }
 }
 
