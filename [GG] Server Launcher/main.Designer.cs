@@ -52,6 +52,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btn_update = new System.Windows.Forms.Button();
+            this.btn_verify2 = new System.Windows.Forms.Button();
+            this.btn_verify = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.btn_browse3 = new System.Windows.Forms.Button();
+            this.btn_browse2 = new System.Windows.Forms.Button();
+            this.btn_browse1 = new System.Windows.Forms.Button();
             this.btn_save = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -65,13 +72,6 @@
             this.btn_off = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.btn_browse1 = new System.Windows.Forms.Button();
-            this.btn_browse2 = new System.Windows.Forms.Button();
-            this.btn_browse3 = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.btn_verify = new System.Windows.Forms.Button();
-            this.btn_verify2 = new System.Windows.Forms.Button();
-            this.btn_update = new System.Windows.Forms.Button();
             this.Panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -104,7 +104,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(39, 31);
             this.button1.TabIndex = 53;
-            this.button1.Text = "|_|";
+            this.button1.Text = "[]";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // Label7
@@ -114,9 +114,9 @@
             this.Label7.ForeColor = System.Drawing.Color.White;
             this.Label7.Location = new System.Drawing.Point(4, 7);
             this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(271, 16);
+            this.Label7.Size = new System.Drawing.Size(286, 16);
             this.Label7.TabIndex = 52;
-            this.Label7.Text = "GHOSTZGAMERZ.COM |PLAYERS ONLINE:";
+            this.Label7.Text = "GHOSTZGAMERZ.COM | PLAYERS ONLINE: 0";
             // 
             // Button4
             // 
@@ -124,7 +124,7 @@
             this.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Button4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button4.ForeColor = System.Drawing.Color.White;
-            this.Button4.Location = new System.Drawing.Point(651, -2);
+            this.Button4.Location = new System.Drawing.Point(651, 0);
             this.Button4.Name = "Button4";
             this.Button4.Size = new System.Drawing.Size(28, 35);
             this.Button4.TabIndex = 51;
@@ -211,16 +211,10 @@
             this.comboBox1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Promoted",
-            "A2 - Vanilla",
-            "A3 - OP",
-            "A2 - OP",
-            "A2 - Eppoch",
-            "A2 - Wasteland",
-            "A3 - Wastedland",
-            "DayZ - SA",
-            "MunchieGame",
-            "SkyZ"});
+            "A2 - Overpoch",
+            "A3 - Epoch",
+            "A3 - ExileMod",
+            "A3 - Wasteland"});
             this.comboBox1.Location = new System.Drawing.Point(-1, 93);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(747, 23);
@@ -296,6 +290,7 @@
             this.label6.Size = new System.Drawing.Size(111, 16);
             this.label6.TabIndex = 55;
             this.label6.Text = "Join Teamspeak";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label3
             // 
@@ -308,6 +303,7 @@
             this.label3.Size = new System.Drawing.Size(62, 16);
             this.label3.TabIndex = 54;
             this.label3.Text = "Forums |";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -320,6 +316,7 @@
             this.label2.Size = new System.Drawing.Size(92, 16);
             this.label2.TabIndex = 53;
             this.label2.Text = "Report Bugs |";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label5
             // 
@@ -332,6 +329,7 @@
             this.label5.Size = new System.Drawing.Size(60, 16);
             this.label5.TabIndex = 52;
             this.label5.Text = "Donate |";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // panel4
             // 
@@ -358,6 +356,100 @@
             this.panel4.Size = new System.Drawing.Size(434, 10);
             this.panel4.TabIndex = 84;
             // 
+            // btn_update
+            // 
+            this.btn_update.BackColor = System.Drawing.Color.Gray;
+            this.btn_update.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_update.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_update.ForeColor = System.Drawing.Color.White;
+            this.btn_update.Location = new System.Drawing.Point(14, 426);
+            this.btn_update.Name = "btn_update";
+            this.btn_update.Size = new System.Drawing.Size(134, 29);
+            this.btn_update.TabIndex = 66;
+            this.btn_update.Text = "Update Launcher";
+            this.btn_update.UseVisualStyleBackColor = false;
+            // 
+            // btn_verify2
+            // 
+            this.btn_verify2.BackColor = System.Drawing.Color.Gray;
+            this.btn_verify2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_verify2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_verify2.ForeColor = System.Drawing.Color.White;
+            this.btn_verify2.Location = new System.Drawing.Point(14, 391);
+            this.btn_verify2.Name = "btn_verify2";
+            this.btn_verify2.Size = new System.Drawing.Size(134, 29);
+            this.btn_verify2.TabIndex = 65;
+            this.btn_verify2.Text = "Verify Arma OA 2";
+            this.btn_verify2.UseVisualStyleBackColor = false;
+            // 
+            // btn_verify
+            // 
+            this.btn_verify.BackColor = System.Drawing.Color.Gray;
+            this.btn_verify.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_verify.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_verify.ForeColor = System.Drawing.Color.White;
+            this.btn_verify.Location = new System.Drawing.Point(14, 356);
+            this.btn_verify.Name = "btn_verify";
+            this.btn_verify.Size = new System.Drawing.Size(134, 29);
+            this.btn_verify.TabIndex = 64;
+            this.btn_verify.Text = "Verify Arma 2";
+            this.btn_verify.UseVisualStyleBackColor = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label11.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Silver;
+            this.label11.Location = new System.Drawing.Point(11, 325);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(41, 16);
+            this.label11.TabIndex = 63;
+            this.label11.Text = "Tools";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
+            // 
+            // btn_browse3
+            // 
+            this.btn_browse3.BackColor = System.Drawing.Color.Gray;
+            this.btn_browse3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_browse3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_browse3.ForeColor = System.Drawing.Color.White;
+            this.btn_browse3.Location = new System.Drawing.Point(352, 175);
+            this.btn_browse3.Name = "btn_browse3";
+            this.btn_browse3.Size = new System.Drawing.Size(70, 20);
+            this.btn_browse3.TabIndex = 62;
+            this.btn_browse3.Text = "Browse";
+            this.btn_browse3.UseVisualStyleBackColor = false;
+            this.btn_browse3.Click += new System.EventHandler(this.btn_browse3_Click);
+            // 
+            // btn_browse2
+            // 
+            this.btn_browse2.BackColor = System.Drawing.Color.Gray;
+            this.btn_browse2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_browse2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_browse2.ForeColor = System.Drawing.Color.White;
+            this.btn_browse2.Location = new System.Drawing.Point(352, 131);
+            this.btn_browse2.Name = "btn_browse2";
+            this.btn_browse2.Size = new System.Drawing.Size(70, 20);
+            this.btn_browse2.TabIndex = 61;
+            this.btn_browse2.Text = "Browse";
+            this.btn_browse2.UseVisualStyleBackColor = false;
+            this.btn_browse2.Click += new System.EventHandler(this.btn_browse2_Click);
+            // 
+            // btn_browse1
+            // 
+            this.btn_browse1.BackColor = System.Drawing.Color.Gray;
+            this.btn_browse1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_browse1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_browse1.ForeColor = System.Drawing.Color.White;
+            this.btn_browse1.Location = new System.Drawing.Point(352, 89);
+            this.btn_browse1.Name = "btn_browse1";
+            this.btn_browse1.Size = new System.Drawing.Size(70, 20);
+            this.btn_browse1.TabIndex = 60;
+            this.btn_browse1.Text = "Browse";
+            this.btn_browse1.UseVisualStyleBackColor = false;
+            this.btn_browse1.Click += new System.EventHandler(this.btn_browse1_Click);
+            // 
             // btn_save
             // 
             this.btn_save.BackColor = System.Drawing.Color.Gray;
@@ -380,9 +472,9 @@
             this.label12.ForeColor = System.Drawing.Color.Silver;
             this.label12.Location = new System.Drawing.Point(11, 201);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(86, 13);
+            this.label12.Size = new System.Drawing.Size(109, 13);
             this.label12.TabIndex = 57;
-            this.label12.Text = "Additional Param";
+            this.label12.Text = "Additional Parameters";
             // 
             // label10
             // 
@@ -392,9 +484,9 @@
             this.label10.ForeColor = System.Drawing.Color.Silver;
             this.label10.Location = new System.Drawing.Point(11, 158);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(47, 13);
+            this.label10.Size = new System.Drawing.Size(72, 13);
             this.label10.TabIndex = 55;
-            this.label10.Text = "ARMA 3";
+            this.label10.Text = "ARMA 3 Path";
             // 
             // label9
             // 
@@ -487,100 +579,6 @@
             // 
             this.timer2.Interval = 1;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
-            // btn_browse1
-            // 
-            this.btn_browse1.BackColor = System.Drawing.Color.Gray;
-            this.btn_browse1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_browse1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_browse1.ForeColor = System.Drawing.Color.White;
-            this.btn_browse1.Location = new System.Drawing.Point(352, 89);
-            this.btn_browse1.Name = "btn_browse1";
-            this.btn_browse1.Size = new System.Drawing.Size(70, 20);
-            this.btn_browse1.TabIndex = 60;
-            this.btn_browse1.Text = "Browse";
-            this.btn_browse1.UseVisualStyleBackColor = false;
-            this.btn_browse1.Click += new System.EventHandler(this.btn_browse1_Click);
-            // 
-            // btn_browse2
-            // 
-            this.btn_browse2.BackColor = System.Drawing.Color.Gray;
-            this.btn_browse2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_browse2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_browse2.ForeColor = System.Drawing.Color.White;
-            this.btn_browse2.Location = new System.Drawing.Point(352, 131);
-            this.btn_browse2.Name = "btn_browse2";
-            this.btn_browse2.Size = new System.Drawing.Size(70, 20);
-            this.btn_browse2.TabIndex = 61;
-            this.btn_browse2.Text = "Browse";
-            this.btn_browse2.UseVisualStyleBackColor = false;
-            this.btn_browse2.Click += new System.EventHandler(this.btn_browse2_Click);
-            // 
-            // btn_browse3
-            // 
-            this.btn_browse3.BackColor = System.Drawing.Color.Gray;
-            this.btn_browse3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_browse3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_browse3.ForeColor = System.Drawing.Color.White;
-            this.btn_browse3.Location = new System.Drawing.Point(352, 175);
-            this.btn_browse3.Name = "btn_browse3";
-            this.btn_browse3.Size = new System.Drawing.Size(70, 20);
-            this.btn_browse3.TabIndex = 62;
-            this.btn_browse3.Text = "Browse";
-            this.btn_browse3.UseVisualStyleBackColor = false;
-            this.btn_browse3.Click += new System.EventHandler(this.btn_browse3_Click);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label11.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Silver;
-            this.label11.Location = new System.Drawing.Point(11, 325);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(41, 16);
-            this.label11.TabIndex = 63;
-            this.label11.Text = "Tools";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
-            // 
-            // btn_verify
-            // 
-            this.btn_verify.BackColor = System.Drawing.Color.Gray;
-            this.btn_verify.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_verify.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_verify.ForeColor = System.Drawing.Color.White;
-            this.btn_verify.Location = new System.Drawing.Point(14, 356);
-            this.btn_verify.Name = "btn_verify";
-            this.btn_verify.Size = new System.Drawing.Size(134, 29);
-            this.btn_verify.TabIndex = 64;
-            this.btn_verify.Text = "Verify Arma 2";
-            this.btn_verify.UseVisualStyleBackColor = false;
-            // 
-            // btn_verify2
-            // 
-            this.btn_verify2.BackColor = System.Drawing.Color.Gray;
-            this.btn_verify2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_verify2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_verify2.ForeColor = System.Drawing.Color.White;
-            this.btn_verify2.Location = new System.Drawing.Point(14, 391);
-            this.btn_verify2.Name = "btn_verify2";
-            this.btn_verify2.Size = new System.Drawing.Size(134, 29);
-            this.btn_verify2.TabIndex = 65;
-            this.btn_verify2.Text = "Verify Arma OA 2";
-            this.btn_verify2.UseVisualStyleBackColor = false;
-            // 
-            // btn_update
-            // 
-            this.btn_update.BackColor = System.Drawing.Color.Gray;
-            this.btn_update.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_update.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_update.ForeColor = System.Drawing.Color.White;
-            this.btn_update.Location = new System.Drawing.Point(14, 426);
-            this.btn_update.Name = "btn_update";
-            this.btn_update.Size = new System.Drawing.Size(134, 29);
-            this.btn_update.TabIndex = 66;
-            this.btn_update.Text = "Update Launcher";
-            this.btn_update.UseVisualStyleBackColor = false;
             // 
             // main
             // 

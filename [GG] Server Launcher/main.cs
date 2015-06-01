@@ -294,31 +294,48 @@ namespace _GG__Server_Launcher
         private void btn_browse1_Click(object sender, EventArgs e)
         {
 
-            OpenFileDialog op1 = new OpenFileDialog();
+            FolderBrowserDialog op1 = new FolderBrowserDialog();
             op1.ShowDialog();
-            op1.Filter="Exe Files (.exe)|*.exe";
-            txtarma1.Text = op1.FileName;
+            txtarma1.Text = op1.SelectedPath.ToString();
         }
 
         private void btn_browse2_Click(object sender, EventArgs e)
         {
-            OpenFileDialog op1 = new OpenFileDialog();
+            FolderBrowserDialog op1 = new FolderBrowserDialog();
             op1.ShowDialog();
-            op1.Filter = "Exe Files (.exe)|*.exe";
-            txtarma2.Text = op1.FileName;
+            txtarma2.Text = op1.SelectedPath.ToString();
         }
 
         private void btn_browse3_Click(object sender, EventArgs e)
         {
-            OpenFileDialog op1 = new OpenFileDialog();
+            FolderBrowserDialog op1 = new FolderBrowserDialog();
             op1.ShowDialog();
-            op1.Filter = "Exe Files (.exe)|*.exe";
-            txtarma3.Text = op1.FileName;
+            txtarma3.Text = op1.SelectedPath.ToString();
         }
 
         private void label11_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            Process.Start("http://ghostzgamerz.com/donate/");
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Process.Start("http://ghostzgamerz.com/forums/bug-reports.170/");
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+          Process.Start("http://ghostzgamerz.com/");
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            Process.Start("http://www.teamspeak.com/invite/ts.ghostzgamerz.com/");
         }
     }
 }
