@@ -36,6 +36,7 @@
             this.Button4 = new System.Windows.Forms.Button();
             this.Button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_mods = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btn_server = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -72,6 +73,12 @@
             this.btn_off = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -150,6 +157,7 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel1.Controls.Add(this.btn_mods);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.btn_server);
             this.panel1.Controls.Add(this.label1);
@@ -157,6 +165,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(751, 32);
             this.panel1.TabIndex = 52;
+            // 
+            // btn_mods
+            // 
+            this.btn_mods.AutoSize = true;
+            this.btn_mods.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_mods.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_mods.ForeColor = System.Drawing.Color.Silver;
+            this.btn_mods.Location = new System.Drawing.Point(114, 7);
+            this.btn_mods.Name = "btn_mods";
+            this.btn_mods.Size = new System.Drawing.Size(41, 16);
+            this.btn_mods.TabIndex = 55;
+            this.btn_mods.Text = "Mods";
+            this.btn_mods.Click += new System.EventHandler(this.btn_mods_Click);
             // 
             // label4
             // 
@@ -199,11 +220,11 @@
             // 
             // webBrowser1
             // 
-            this.webBrowser1.Location = new System.Drawing.Point(-1, 116);
+            this.webBrowser1.Location = new System.Drawing.Point(-1, 93);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
             this.webBrowser1.ScriptErrorsSuppressed = true;
-            this.webBrowser1.Size = new System.Drawing.Size(747, 359);
+            this.webBrowser1.Size = new System.Drawing.Size(747, 366);
             this.webBrowser1.TabIndex = 53;
             // 
             // comboBox1
@@ -232,10 +253,10 @@
             this.listView1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.GridLines = true;
             this.listView1.HoverSelection = true;
-            this.listView1.Location = new System.Drawing.Point(-1, 116);
+            this.listView1.Location = new System.Drawing.Point(-1, 93);
             this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(747, 359);
+            this.listView1.Size = new System.Drawing.Size(747, 382);
             this.listView1.TabIndex = 81;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -285,7 +306,7 @@
             this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Silver;
-            this.label6.Location = new System.Drawing.Point(206, 7);
+            this.label6.Location = new System.Drawing.Point(211, 7);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(111, 16);
             this.label6.TabIndex = 55;
@@ -300,9 +321,9 @@
             this.label3.ForeColor = System.Drawing.Color.Silver;
             this.label3.Location = new System.Drawing.Point(149, 7);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 16);
+            this.label3.Size = new System.Drawing.Size(66, 16);
             this.label3.TabIndex = 54;
-            this.label3.Text = "Forums |";
+            this.label3.Text = "Website |";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
@@ -580,12 +601,58 @@
             this.timer2.Interval = 1;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
+            // listView2
+            // 
+            this.listView2.BackColor = System.Drawing.Color.SteelBlue;
+            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader3,
+            this.columnHeader6,
+            this.columnHeader7,
+            this.columnHeader8});
+            this.listView2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView2.FullRowSelect = true;
+            this.listView2.GridLines = true;
+            this.listView2.Location = new System.Drawing.Point(-1, 93);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(747, 382);
+            this.listView2.TabIndex = 85;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.Details;
+            this.listView2.Visible = false;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Name";
+            this.columnHeader1.Width = 150;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Status";
+            this.columnHeader3.Width = 150;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Size";
+            this.columnHeader6.Width = 100;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Progress";
+            this.columnHeader7.Width = 250;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "";
+            this.columnHeader8.Width = 90;
+            // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(748, 507);
+            this.Controls.Add(this.listView2);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.webBrowser1);
@@ -658,6 +725,13 @@
         private System.Windows.Forms.Button btn_update;
         private System.Windows.Forms.Button btn_verify2;
         private System.Windows.Forms.Button btn_verify;
+        internal System.Windows.Forms.Label btn_mods;
+        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
     }
 }
 

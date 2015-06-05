@@ -134,6 +134,7 @@ namespace _GG__Server_Launcher
 
             webBrowser1.Visible = false;
             comboBox1.Visible = true;
+            listView2.Visible = false;
         }
 
         class WebPostRequest
@@ -176,6 +177,7 @@ namespace _GG__Server_Launcher
         {
             webBrowser1.Visible = true;
             comboBox1.Visible = false;
+            listView2.Visible = false;
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -336,6 +338,106 @@ namespace _GG__Server_Launcher
         private void label6_Click(object sender, EventArgs e)
         {
             Process.Start("http://www.teamspeak.com/invite/ts.ghostzgamerz.com/");
+        }
+
+        private void load_mods()
+        {
+           string [] arr = new string[3];
+           ListViewItem itm;
+
+           arr[0] = "Dayz Epoch 1.0.5.1";
+           arr[1] = "Not Installed";
+           arr[2] = "12 MB";
+           itm = new ListViewItem(arr);
+           listView2.Items.Add(itm);
+
+           arr[0] = "Dayz Overwatch 0.2.5";
+           arr[1] = "Not Installed";
+           arr[2] = "4 MB";
+           itm = new ListViewItem(arr);
+           listView2.Items.Add(itm);
+
+           arr[0] = "Dayz Taviana 2.0";
+           arr[1] = "Not Installed";
+           arr[2] = "5 MB";
+           itm = new ListViewItem(arr);
+           listView2.Items.Add(itm);
+
+           arr[0] = "Dayz Panthera 1.8.1";
+           arr[1] = "Not Installed";
+           arr[2] = "23.2 MB";
+           itm = new ListViewItem(arr);
+           listView2.Items.Add(itm);
+
+           arr[0] = "Dayz Lingor 1.8.1";
+           arr[1] = "Not Installed";
+           arr[2] = "14.3 MB";
+           itm = new ListViewItem(arr);
+           listView2.Items.Add(itm);
+
+           arr[0] = "Dayz Namalsk 0.75";
+           arr[1] = "Not Installed";
+           arr[2] = "3.9 MB";
+           itm = new ListViewItem(arr);
+           listView2.Items.Add(itm);
+
+           arr[0] = "Dayz Origins 1.7.9.5";
+           arr[1] = "Not Installed";
+           arr[2] = "9.0 MB";
+           itm = new ListViewItem(arr);
+           listView2.Items.Add(itm);
+
+
+           arr[0] = "Epoch 0.3.0.3";
+           arr[1] = "Not Installed";
+           arr[2] = "2.1 MB";
+           itm = new ListViewItem(arr);
+           listView2.Items.Add(itm);
+
+           arr[0] = "JSRS: DragonFyre RC4";
+           arr[1] = "Not Installed";
+           arr[2] = "11.0 MB";
+           itm = new ListViewItem(arr);
+           listView2.Items.Add(itm);
+
+           arr[0] = "MAS Weapons 1.8";
+           arr[1] = "Not Installed";
+           arr[2] = "5 MB";
+           itm = new ListViewItem(arr);
+           listView2.Items.Add(itm);
+
+           arr[0] = "MAS Vehicles 1.0";
+           arr[1] = "Not Installed";
+           arr[2] = "10 MB";
+           itm = new ListViewItem(arr);
+           listView2.Items.Add(itm);
+
+           arr[0] = "All In ARMA Terrain Pack 1.4.1";
+           arr[1] = "Not Installed";
+           arr[2] = "18 MB";
+           itm = new ListViewItem(arr);
+           listView2.Items.Add(itm);
+
+           arr[0] = "Bornholm 1.3";
+           arr[1] = "Not Installed";
+           arr[2] = "4 MB";
+           itm = new ListViewItem(arr);
+           listView2.Items.Add(itm);
+
+           arr[0] = "Esseker 0.61";
+           arr[1] = "Not Installed";
+           arr[2] = "21.0 MB";
+           itm = new ListViewItem(arr);
+           listView2.Items.Add(itm);
+           
+        }
+
+        private void btn_mods_Click(object sender, EventArgs e)
+        {
+            load_mods();
+            listView2.Visible = true;
+            webBrowser1.Visible = false;
+            comboBox1.Visible = false;
         }
     }
 }
