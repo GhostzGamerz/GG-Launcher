@@ -40,13 +40,31 @@ namespace _GG__Server_Launcher
         private const int SET_FEATURE_ON_THREAD_INTERNET = 0x00000040;
         private const int SET_FEATURE_ON_THREAD_RESTRICTED = 0x00000080;
 
+        private Thread thrDownload;
+        private Stream strResponse;
+        private Stream strLocal;
+        private HttpWebRequest webRequest;
+        private HttpWebResponse webResponse;
+        private static int PercentProgress;
+        private delegate void UpdateProgessCallback(Int64 BytesRead, Int64 TotalBytes);
+ 
         public main()
         {
             InitializeComponent();
         }
 
+        string link = "";
+        int row;
+
         private void main_Load(object sender, EventArgs e)
         {
+
+            comboBox1.Visible = false;
+
+            panel5.Visible = true;
+            panel6.Visible = false;
+            panel7.Visible = false;
+
             run_ie9();
             webBrowser1.Navigate("http://ghostzgamerz.com/forums/breaking-news.118/");
             loaad_settings();
@@ -71,7 +89,7 @@ namespace _GG__Server_Launcher
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void Panel3_MouseDown(object sender, MouseEventArgs e)
@@ -132,9 +150,11 @@ namespace _GG__Server_Launcher
             listView1.Items.Clear();
             get_servername();
 
-            webBrowser1.Visible = false;
             comboBox1.Visible = true;
-            listView2.Visible = false;
+            panel5.Visible =false;
+            panel6.Visible = true;
+            panel7.Visible = false;
+
         }
 
         class WebPostRequest
@@ -175,9 +195,12 @@ namespace _GG__Server_Launcher
 
         private void label1_Click(object sender, EventArgs e)
         {
-            webBrowser1.Visible = true;
+          
             comboBox1.Visible = false;
-            listView2.Visible = false;
+
+            panel5.Visible = true;
+            panel6.Visible = false;
+            panel7.Visible = false;
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -342,102 +365,162 @@ namespace _GG__Server_Launcher
 
         private void load_mods()
         {
-           string [] arr = new string[3];
-           ListViewItem itm;
+           dataGridView1.Rows.Add(15);
+           dataGridView1.Rows[0].Cells[0].Value = "Dayz Epoch 1.0.5.1";
+           dataGridView1.Rows[0].Cells[1].Value = "Not Installed";
+           dataGridView1.Rows[0].Cells[2].Value = "12 MB";
+           dataGridView1.Rows[0].Cells[4].Value = "Download";
+           dataGridView1.Rows[0].Cells[5].Value = "http://ghostzgamerz.com/downloads/@DayZ_Epoch.zip";
 
-           arr[0] = "Dayz Epoch 1.0.5.1";
-           arr[1] = "Not Installed";
-           arr[2] = "12 MB";
-           itm = new ListViewItem(arr);
-           listView2.Items.Add(itm);
+           dataGridView1.Rows[1].Cells[0].Value = "Dayz Overwatch 0.2.5";
+           dataGridView1.Rows[1].Cells[1].Value = "Not Installed";
+           dataGridView1.Rows[1].Cells[2].Value = "4 MB";
+           dataGridView1.Rows[1].Cells[4].Value = "Download";
 
-           arr[0] = "Dayz Overwatch 0.2.5";
-           arr[1] = "Not Installed";
-           arr[2] = "4 MB";
-           itm = new ListViewItem(arr);
-           listView2.Items.Add(itm);
+           dataGridView1.Rows[2].Cells[0].Value = "Dayz Taviana 2.0";
+           dataGridView1.Rows[2].Cells[1].Value = "Not Installed";
+           dataGridView1.Rows[2].Cells[2].Value = "MB";
+           dataGridView1.Rows[2].Cells[4].Value = "Download";
 
-           arr[0] = "Dayz Taviana 2.0";
-           arr[1] = "Not Installed";
-           arr[2] = "5 MB";
-           itm = new ListViewItem(arr);
-           listView2.Items.Add(itm);
+           dataGridView1.Rows[3].Cells[0].Value = "Dayz Panthera 1.8.1";
+           dataGridView1.Rows[3].Cells[1].Value = "Not Installed";
+           dataGridView1.Rows[3].Cells[2].Value = "23.2 MB";
+           dataGridView1.Rows[3].Cells[4].Value = "Download";
 
-           arr[0] = "Dayz Panthera 1.8.1";
-           arr[1] = "Not Installed";
-           arr[2] = "23.2 MB";
-           itm = new ListViewItem(arr);
-           listView2.Items.Add(itm);
+           dataGridView1.Rows[4].Cells[0].Value = "Dayz Lingor 1.8.1";
+           dataGridView1.Rows[4].Cells[1].Value = "Not Installed";
+           dataGridView1.Rows[4].Cells[2].Value = "14.3 MB";
+           dataGridView1.Rows[4].Cells[4].Value = "Download";
 
-           arr[0] = "Dayz Lingor 1.8.1";
-           arr[1] = "Not Installed";
-           arr[2] = "14.3 MB";
-           itm = new ListViewItem(arr);
-           listView2.Items.Add(itm);
+           dataGridView1.Rows[5].Cells[0].Value = "Dayz Namalsk 0.75";
+           dataGridView1.Rows[5].Cells[1].Value = "Not Installed";
+           dataGridView1.Rows[5].Cells[2].Value = "3.9 MB";
+           dataGridView1.Rows[5].Cells[4].Value = "Download";
 
-           arr[0] = "Dayz Namalsk 0.75";
-           arr[1] = "Not Installed";
-           arr[2] = "3.9 MB";
-           itm = new ListViewItem(arr);
-           listView2.Items.Add(itm);
+           dataGridView1.Rows[6].Cells[0].Value = "Dayz Origins 1.7.9.5";
+           dataGridView1.Rows[6].Cells[1].Value = "Not Installed";
+           dataGridView1.Rows[6].Cells[2].Value = "9.0 MB";
+           dataGridView1.Rows[6].Cells[4].Value = "Download";
 
-           arr[0] = "Dayz Origins 1.7.9.5";
-           arr[1] = "Not Installed";
-           arr[2] = "9.0 MB";
-           itm = new ListViewItem(arr);
-           listView2.Items.Add(itm);
+           dataGridView1.Rows[7].Cells[0].Value = "";
 
+           dataGridView1.Rows[8].Cells[0].Value = "Epoch 0.3.0.3";
+           dataGridView1.Rows[8].Cells[1].Value = "Not Installed";
+           dataGridView1.Rows[8].Cells[2].Value = "2.1 MB";
+           dataGridView1.Rows[8].Cells[4].Value = "Download";
 
-           arr[0] = "Epoch 0.3.0.3";
-           arr[1] = "Not Installed";
-           arr[2] = "2.1 MB";
-           itm = new ListViewItem(arr);
-           listView2.Items.Add(itm);
+           dataGridView1.Rows[9].Cells[0].Value = "JSRS: DragonFyre RC4";
+           dataGridView1.Rows[9].Cells[1].Value = "Not Installed";
+           dataGridView1.Rows[9].Cells[2].Value = "11.0 MB";
+           dataGridView1.Rows[9].Cells[4].Value = "Download";
 
-           arr[0] = "JSRS: DragonFyre RC4";
-           arr[1] = "Not Installed";
-           arr[2] = "11.0 MB";
-           itm = new ListViewItem(arr);
-           listView2.Items.Add(itm);
+           dataGridView1.Rows[10].Cells[0].Value = "MAS Weapons 1.8";
+           dataGridView1.Rows[10].Cells[1].Value = "Not Installed";
+           dataGridView1.Rows[10].Cells[2].Value = "5 MB";
+           dataGridView1.Rows[10].Cells[4].Value = "Download";
 
-           arr[0] = "MAS Weapons 1.8";
-           arr[1] = "Not Installed";
-           arr[2] = "5 MB";
-           itm = new ListViewItem(arr);
-           listView2.Items.Add(itm);
+           dataGridView1.Rows[11].Cells[0].Value = "MAS Vehicles 1.0";
+           dataGridView1.Rows[11].Cells[1].Value = "Not Installed";
+           dataGridView1.Rows[11].Cells[2].Value = "10 MB";
+           dataGridView1.Rows[11].Cells[4].Value = "Download";
 
-           arr[0] = "MAS Vehicles 1.0";
-           arr[1] = "Not Installed";
-           arr[2] = "10 MB";
-           itm = new ListViewItem(arr);
-           listView2.Items.Add(itm);
+           dataGridView1.Rows[12].Cells[0].Value = "All In ARMA Terrain Pack 1.4.1";
+           dataGridView1.Rows[12].Cells[1].Value = "Not Installed";
+           dataGridView1.Rows[12].Cells[2].Value = "18 MB";
+           dataGridView1.Rows[12].Cells[4].Value = "Download";
 
-           arr[0] = "All In ARMA Terrain Pack 1.4.1";
-           arr[1] = "Not Installed";
-           arr[2] = "18 MB";
-           itm = new ListViewItem(arr);
-           listView2.Items.Add(itm);
+           dataGridView1.Rows[13].Cells[0].Value = "Bornholm 1.3";
+           dataGridView1.Rows[13].Cells[1].Value = "Not Installed";
+           dataGridView1.Rows[13].Cells[2].Value = "4 MB";
+           dataGridView1.Rows[13].Cells[4].Value = "Download";
 
-           arr[0] = "Bornholm 1.3";
-           arr[1] = "Not Installed";
-           arr[2] = "4 MB";
-           itm = new ListViewItem(arr);
-           listView2.Items.Add(itm);
-
-           arr[0] = "Esseker 0.61";
-           arr[1] = "Not Installed";
-           arr[2] = "21.0 MB";
-           itm = new ListViewItem(arr);
-           listView2.Items.Add(itm);
-           
+           dataGridView1.Rows[14].Cells[0].Value = "Esseker 0.61";
+           dataGridView1.Rows[14].Cells[1].Value = "Not Installed";
+           dataGridView1.Rows[14].Cells[2].Value = "21.0 MB";
+           dataGridView1.Rows[14].Cells[4].Value = "Download";
+       
         }
 
         private void btn_mods_Click(object sender, EventArgs e)
         {
+            dataGridView1.Rows.Clear();
+            dataGridView1.Columns[5].Visible = false;
+
             load_mods();
-            listView2.Visible = true;
-            webBrowser1.Visible = false;
             comboBox1.Visible = false;
+
+            comboBox1.Visible = false;
+
+            panel5.Visible = false;
+            panel6.Visible = false;
+            panel7.Visible = true;
+        }
+
+        string flink = "";
+        int frow;
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                var senderGrid = (DataGridView)sender;
+
+                if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
+                    e.RowIndex >= 0)
+                {
+                    link = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[5].Value.ToString();
+                    row = dataGridView1.CurrentRow.Index;
+
+                    flink = link;
+                    row = frow;
+
+                    thrDownload = new Thread(Download);
+                    thrDownload.Start();
+                }
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void UpdateProgress(Int64 BytesRead, Int64 TotalBytes)
+        {
+            // Calculate the download progress in percentages
+            PercentProgress = Convert.ToInt32((BytesRead * 100) / TotalBytes);
+            dataGridView1.Rows[frow].Cells[3].Value = "Downloaded " + BytesRead + " out of " + TotalBytes + " (" + PercentProgress + "%)";
+        }
+
+        private void Download()
+        {
+            using (WebClient wcDownload = new WebClient())
+            {
+                try
+                {
+                    webRequest = (HttpWebRequest)WebRequest.Create(flink);
+                    webRequest.Credentials = CredentialCache.DefaultCredentials;
+                    webResponse = (HttpWebResponse)webRequest.GetResponse();
+
+                    Int64 fileSize = webResponse.ContentLength;
+                    strResponse = wcDownload.OpenRead(flink);
+                    strLocal = new FileStream(txtarma1.Text + "\\Dayz Epoch 1.0.5.1.zip", FileMode.Create, FileAccess.Write, FileShare.None);
+
+                    int bytesSize = 0;
+                    byte[] downBuffer = new byte[2048];
+
+                    while ((bytesSize = strResponse.Read(downBuffer, 0, downBuffer.Length)) > 0)
+                    {
+                        strLocal.Write(downBuffer, 0, bytesSize);
+                        this.Invoke(new UpdateProgessCallback(this.UpdateProgress), new object[] { strLocal.Length, fileSize });
+                    }
+                }
+                catch { }
+                finally
+                {
+                    strResponse.Close();
+                    strLocal.Close();
+                }
+            }
         }
     }
 }

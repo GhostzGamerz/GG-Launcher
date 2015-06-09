@@ -73,17 +73,26 @@
             this.btn_off = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
             this.Panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_up)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // Panel3
@@ -97,7 +106,7 @@
             this.Panel3.Controls.Add(this.Button2);
             this.Panel3.Location = new System.Drawing.Point(-1, 0);
             this.Panel3.Name = "Panel3";
-            this.Panel3.Size = new System.Drawing.Size(751, 32);
+            this.Panel3.Size = new System.Drawing.Size(750, 32);
             this.Panel3.TabIndex = 51;
             this.Panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel3_MouseDown);
             // 
@@ -107,7 +116,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(681, 0);
+            this.button1.Location = new System.Drawing.Point(680, 0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(39, 31);
             this.button1.TabIndex = 53;
@@ -131,7 +140,7 @@
             this.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Button4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button4.ForeColor = System.Drawing.Color.White;
-            this.Button4.Location = new System.Drawing.Point(651, 0);
+            this.Button4.Location = new System.Drawing.Point(650, 0);
             this.Button4.Name = "Button4";
             this.Button4.Size = new System.Drawing.Size(28, 35);
             this.Button4.TabIndex = 51;
@@ -144,7 +153,7 @@
             this.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Button2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button2.ForeColor = System.Drawing.Color.White;
-            this.Button2.Location = new System.Drawing.Point(715, 1);
+            this.Button2.Location = new System.Drawing.Point(714, 1);
             this.Button2.Name = "Button2";
             this.Button2.Size = new System.Drawing.Size(32, 31);
             this.Button2.TabIndex = 50;
@@ -163,7 +172,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-1, 39);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(751, 32);
+            this.panel1.Size = new System.Drawing.Size(750, 32);
             this.panel1.TabIndex = 52;
             // 
             // btn_mods
@@ -220,11 +229,12 @@
             // 
             // webBrowser1
             // 
-            this.webBrowser1.Location = new System.Drawing.Point(-1, 93);
+            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webBrowser1.Location = new System.Drawing.Point(0, 0);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
             this.webBrowser1.ScriptErrorsSuppressed = true;
-            this.webBrowser1.Size = new System.Drawing.Size(747, 366);
+            this.webBrowser1.Size = new System.Drawing.Size(749, 363);
             this.webBrowser1.TabIndex = 53;
             // 
             // comboBox1
@@ -236,7 +246,7 @@
             "A3 - Epoch",
             "A3 - ExileMod",
             "A3 - Wasteland"});
-            this.comboBox1.Location = new System.Drawing.Point(-1, 93);
+            this.comboBox1.Location = new System.Drawing.Point(-1, 94);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(747, 23);
             this.comboBox1.TabIndex = 55;
@@ -250,13 +260,14 @@
             this.columnHeader2,
             this.columnHeader4,
             this.columnHeader5});
+            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.GridLines = true;
             this.listView1.HoverSelection = true;
-            this.listView1.Location = new System.Drawing.Point(-1, 93);
+            this.listView1.Location = new System.Drawing.Point(0, 0);
             this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(747, 382);
+            this.listView1.Size = new System.Drawing.Size(749, 360);
             this.listView1.TabIndex = 81;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -297,7 +308,7 @@
             this.panel2.Controls.Add(this.label5);
             this.panel2.Location = new System.Drawing.Point(-2, 475);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(751, 32);
+            this.panel2.Size = new System.Drawing.Size(750, 32);
             this.panel2.TabIndex = 83;
             // 
             // label6
@@ -601,66 +612,112 @@
             this.timer2.Interval = 1;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
-            // listView2
+            // dataGridView1
             // 
-            this.listView2.BackColor = System.Drawing.Color.SteelBlue;
-            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader3,
-            this.columnHeader6,
-            this.columnHeader7,
-            this.columnHeader8});
-            this.listView2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView2.FullRowSelect = true;
-            this.listView2.GridLines = true;
-            this.listView2.Location = new System.Drawing.Point(-1, 93);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(747, 382);
-            this.listView2.TabIndex = 85;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.Details;
-            this.listView2.Visible = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6});
+            this.dataGridView1.Location = new System.Drawing.Point(0, 30);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(750, 342);
+            this.dataGridView1.TabIndex = 85;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // columnHeader1
+            // Column1
             // 
-            this.columnHeader1.Text = "Name";
-            this.columnHeader1.Width = 150;
+            this.Column1.HeaderText = "Name";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 150;
             // 
-            // columnHeader3
+            // Column2
             // 
-            this.columnHeader3.Text = "Status";
-            this.columnHeader3.Width = 150;
+            this.Column2.HeaderText = "Status";
+            this.Column2.Name = "Column2";
             // 
-            // columnHeader6
+            // Column3
             // 
-            this.columnHeader6.Text = "Size";
-            this.columnHeader6.Width = 100;
+            this.Column3.HeaderText = "Size";
+            this.Column3.Name = "Column3";
             // 
-            // columnHeader7
+            // Column4
             // 
-            this.columnHeader7.Text = "Progress";
-            this.columnHeader7.Width = 250;
+            this.Column4.HeaderText = "Progress";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 295;
             // 
-            // columnHeader8
+            // Column5
             // 
-            this.columnHeader8.Text = "";
-            this.columnHeader8.Width = 90;
+            this.Column5.HeaderText = "";
+            this.Column5.Name = "Column5";
+            this.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Column5.Text = "Download";
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Column6";
+            this.Column6.Name = "Column6";
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.webBrowser1);
+            this.panel5.Location = new System.Drawing.Point(-1, 116);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(749, 363);
+            this.panel5.TabIndex = 86;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.listView1);
+            this.panel6.Location = new System.Drawing.Point(0, 116);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(749, 360);
+            this.panel6.TabIndex = 87;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.label14);
+            this.panel7.Controls.Add(this.dataGridView1);
+            this.panel7.Location = new System.Drawing.Point(0, 94);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(748, 364);
+            this.panel7.TabIndex = 82;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Black;
+            this.label14.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label14.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(3, 8);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(225, 16);
+            this.label14.TabIndex = 87;
+            this.label14.Text = "List of Arma 2  and ARMA 3 Mods :";
             // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(748, 507);
-            this.Controls.Add(this.listView2);
+            this.ClientSize = new System.Drawing.Size(747, 507);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.webBrowser1);
+            this.Controls.Add(this.panel7);
+            this.Controls.Add(this.panel6);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.listView1);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Panel3);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.comboBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "main";
@@ -676,6 +733,11 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_up)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -726,12 +788,17 @@
         private System.Windows.Forms.Button btn_verify2;
         private System.Windows.Forms.Button btn_verify;
         internal System.Windows.Forms.Label btn_mods;
-        private System.Windows.Forms.ListView listView2;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader6;
-        private System.Windows.Forms.ColumnHeader columnHeader7;
-        private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel7;
+        internal System.Windows.Forms.Label label14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewButtonColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
     }
 }
 
