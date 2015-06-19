@@ -84,6 +84,7 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.Panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -106,7 +107,7 @@
             this.Panel3.Controls.Add(this.Button2);
             this.Panel3.Location = new System.Drawing.Point(-1, 0);
             this.Panel3.Name = "Panel3";
-            this.Panel3.Size = new System.Drawing.Size(750, 32);
+            this.Panel3.Size = new System.Drawing.Size(752, 32);
             this.Panel3.TabIndex = 51;
             this.Panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel3_MouseDown);
             // 
@@ -116,7 +117,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(680, 0);
+            this.button1.Location = new System.Drawing.Point(682, 0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(39, 31);
             this.button1.TabIndex = 53;
@@ -140,7 +141,7 @@
             this.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Button4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button4.ForeColor = System.Drawing.Color.White;
-            this.Button4.Location = new System.Drawing.Point(650, 0);
+            this.Button4.Location = new System.Drawing.Point(652, 0);
             this.Button4.Name = "Button4";
             this.Button4.Size = new System.Drawing.Size(28, 35);
             this.Button4.TabIndex = 51;
@@ -153,7 +154,7 @@
             this.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Button2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button2.ForeColor = System.Drawing.Color.White;
-            this.Button2.Location = new System.Drawing.Point(714, 1);
+            this.Button2.Location = new System.Drawing.Point(716, 1);
             this.Button2.Name = "Button2";
             this.Button2.Size = new System.Drawing.Size(32, 31);
             this.Button2.TabIndex = 50;
@@ -172,7 +173,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-1, 39);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(750, 32);
+            this.panel1.Size = new System.Drawing.Size(752, 32);
             this.panel1.TabIndex = 52;
             // 
             // btn_mods
@@ -248,7 +249,7 @@
             "A3 - Wasteland"});
             this.comboBox1.Location = new System.Drawing.Point(-1, 94);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(747, 23);
+            this.comboBox1.Size = new System.Drawing.Size(750, 23);
             this.comboBox1.TabIndex = 55;
             this.comboBox1.Visible = false;
             // 
@@ -308,7 +309,7 @@
             this.panel2.Controls.Add(this.label5);
             this.panel2.Location = new System.Drawing.Point(-2, 475);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(750, 32);
+            this.panel2.Size = new System.Drawing.Size(752, 32);
             this.panel2.TabIndex = 83;
             // 
             // label6
@@ -622,11 +623,11 @@
             this.Column4,
             this.Column5,
             this.Column6});
-            this.dataGridView1.Location = new System.Drawing.Point(0, 30);
+            this.dataGridView1.Location = new System.Drawing.Point(1, 27);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(750, 342);
+            this.dataGridView1.Size = new System.Drawing.Size(747, 352);
             this.dataGridView1.TabIndex = 85;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -685,9 +686,9 @@
             // 
             this.panel7.Controls.Add(this.label14);
             this.panel7.Controls.Add(this.dataGridView1);
-            this.panel7.Location = new System.Drawing.Point(0, 94);
+            this.panel7.Location = new System.Drawing.Point(1, 94);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(748, 364);
+            this.panel7.Size = new System.Drawing.Size(748, 382);
             this.panel7.TabIndex = 82;
             // 
             // label14
@@ -703,12 +704,21 @@
             this.label14.TabIndex = 87;
             this.label14.Text = "List of Arma 2  and ARMA 3 Mods :";
             // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(782, 109);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(234, 303);
+            this.textBox2.TabIndex = 88;
+            // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(747, 507);
+            this.ClientSize = new System.Drawing.Size(749, 507);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel7);
@@ -722,7 +732,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "[GG] Server Launcher";
             this.Load += new System.EventHandler(this.main_Load);
             this.Panel3.ResumeLayout(false);
             this.Panel3.PerformLayout();
@@ -799,6 +808,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewButtonColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }
 

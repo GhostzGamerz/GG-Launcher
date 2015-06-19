@@ -75,7 +75,10 @@ namespace _GG__Server_Launcher
                 WebResponse webresponse = webRequest.GetResponse();
 
                 inStream = new StreamReader(webresponse.GetResponseStream());
-                textBox1.Text = inStream.ReadToEnd();
+                textBox2.Text = inStream.ReadToEnd();
+
+                StringBuilder lineInfo = new StringBuilder();
+                lineInfo.Append(textBox2.Lines.Length.ToString() + "\n");
 
             }
             catch
@@ -83,8 +86,7 @@ namespace _GG__Server_Launcher
                 //MessageBox.Show("No internet connection detected");
             }
 
-            StringBuilder lineInfo = new StringBuilder();
-            lineInfo.Append(textBox1.Lines.Length.ToString() + "\n");
+           
         }
 
         private void Button2_Click(object sender, EventArgs e)
@@ -376,31 +378,37 @@ namespace _GG__Server_Launcher
            dataGridView1.Rows[1].Cells[1].Value = "Not Installed";
            dataGridView1.Rows[1].Cells[2].Value = "4 MB";
            dataGridView1.Rows[1].Cells[4].Value = "Download";
+           dataGridView1.Rows[1].Cells[5].Value = "http://ghostzgamerz.com/downloads/A2MODS/@DayzOverwatch.zip";
 
            dataGridView1.Rows[2].Cells[0].Value = "Dayz Taviana 2.0";
            dataGridView1.Rows[2].Cells[1].Value = "Not Installed";
            dataGridView1.Rows[2].Cells[2].Value = "MB";
            dataGridView1.Rows[2].Cells[4].Value = "Download";
+           dataGridView1.Rows[2].Cells[5].Value = "http://ghostzgamerz.com/downloads/A2MODS/@Taviana.zip";
 
            dataGridView1.Rows[3].Cells[0].Value = "Dayz Panthera 1.8.1";
            dataGridView1.Rows[3].Cells[1].Value = "Not Installed";
            dataGridView1.Rows[3].Cells[2].Value = "23.2 MB";
            dataGridView1.Rows[3].Cells[4].Value = "Download";
+           dataGridView1.Rows[3].Cells[5].Value = "http://ghostzgamerz.com/downloads/A2MODS/@DayzPanthera.zip";
 
            dataGridView1.Rows[4].Cells[0].Value = "Dayz Lingor 1.8.1";
            dataGridView1.Rows[4].Cells[1].Value = "Not Installed";
            dataGridView1.Rows[4].Cells[2].Value = "14.3 MB";
            dataGridView1.Rows[4].Cells[4].Value = "Download";
+           dataGridView1.Rows[4].Cells[5].Value = "http://ghostzgamerz.com/downloads/A2MODS/@DayZLingor.zip";
 
            dataGridView1.Rows[5].Cells[0].Value = "Dayz Namalsk 0.75";
            dataGridView1.Rows[5].Cells[1].Value = "Not Installed";
            dataGridView1.Rows[5].Cells[2].Value = "3.9 MB";
            dataGridView1.Rows[5].Cells[4].Value = "Download";
+           dataGridView1.Rows[5].Cells[5].Value = "http://ghostzgamerz.com/downloads/A2MODS/@DayzNamalsk.zip";
 
            dataGridView1.Rows[6].Cells[0].Value = "Dayz Origins 1.7.9.5";
            dataGridView1.Rows[6].Cells[1].Value = "Not Installed";
            dataGridView1.Rows[6].Cells[2].Value = "9.0 MB";
            dataGridView1.Rows[6].Cells[4].Value = "Download";
+           dataGridView1.Rows[6].Cells[5].Value = "http://ghostzgamerz.com/downloads/A2MODS/@DayzOrigins.zip";
 
            dataGridView1.Rows[7].Cells[0].Value = "";
 
@@ -408,37 +416,43 @@ namespace _GG__Server_Launcher
            dataGridView1.Rows[8].Cells[1].Value = "Not Installed";
            dataGridView1.Rows[8].Cells[2].Value = "2.1 MB";
            dataGridView1.Rows[8].Cells[4].Value = "Download";
+           dataGridView1.Rows[8].Cells[5].Value = "http://ghostzgamerz.com/downloads/A3MODS/@Epoch.zip";
 
            dataGridView1.Rows[9].Cells[0].Value = "JSRS: DragonFyre RC4";
            dataGridView1.Rows[9].Cells[1].Value = "Not Installed";
            dataGridView1.Rows[9].Cells[2].Value = "11.0 MB";
            dataGridView1.Rows[9].Cells[4].Value = "Download";
+           dataGridView1.Rows[9].Cells[5].Value = "";
 
            dataGridView1.Rows[10].Cells[0].Value = "MAS Weapons 1.8";
            dataGridView1.Rows[10].Cells[1].Value = "Not Installed";
            dataGridView1.Rows[10].Cells[2].Value = "5 MB";
            dataGridView1.Rows[10].Cells[4].Value = "Download";
+           dataGridView1.Rows[10].Cells[5].Value = "http://ghostzgamerz.com/downloads/A3MODS/@mas.zip";
 
            dataGridView1.Rows[11].Cells[0].Value = "MAS Vehicles 1.0";
            dataGridView1.Rows[11].Cells[1].Value = "Not Installed";
            dataGridView1.Rows[11].Cells[2].Value = "10 MB";
            dataGridView1.Rows[11].Cells[4].Value = "Download";
+           dataGridView1.Rows[11].Cells[5].Value = "";
 
            dataGridView1.Rows[12].Cells[0].Value = "All In ARMA Terrain Pack 1.4.1";
            dataGridView1.Rows[12].Cells[1].Value = "Not Installed";
            dataGridView1.Rows[12].Cells[2].Value = "18 MB";
            dataGridView1.Rows[12].Cells[4].Value = "Download";
+           dataGridView1.Rows[12].Cells[5].Value = "http://ghostzgamerz.com/downloads/A3MODS/@AllInArmaTerrainPack.zip";
 
            dataGridView1.Rows[13].Cells[0].Value = "Bornholm 1.3";
            dataGridView1.Rows[13].Cells[1].Value = "Not Installed";
            dataGridView1.Rows[13].Cells[2].Value = "4 MB";
            dataGridView1.Rows[13].Cells[4].Value = "Download";
+           dataGridView1.Rows[13].Cells[5].Value = "http://ghostzgamerz.com/downloads/A3MODS/@Bornholm.zip";
 
            dataGridView1.Rows[14].Cells[0].Value = "Esseker 0.61";
            dataGridView1.Rows[14].Cells[1].Value = "Not Installed";
            dataGridView1.Rows[14].Cells[2].Value = "21.0 MB";
            dataGridView1.Rows[14].Cells[4].Value = "Download";
-       
+           dataGridView1.Rows[14].Cells[5].Value = "http://ghostzgamerz.com/downloads/A3MODS/@Esseker.zip";
         }
 
         private void btn_mods_Click(object sender, EventArgs e)
@@ -458,6 +472,7 @@ namespace _GG__Server_Launcher
 
         string flink = "";
         int frow;
+        string name;
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -469,6 +484,7 @@ namespace _GG__Server_Launcher
                     e.RowIndex >= 0)
                 {
                     link = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[5].Value.ToString();
+                    name = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[0].Value.ToString();
                     row = dataGridView1.CurrentRow.Index;
 
                     flink = link;
@@ -503,7 +519,7 @@ namespace _GG__Server_Launcher
 
                     Int64 fileSize = webResponse.ContentLength;
                     strResponse = wcDownload.OpenRead(flink);
-                    strLocal = new FileStream(txtarma1.Text + "\\Dayz Epoch 1.0.5.1.zip", FileMode.Create, FileAccess.Write, FileShare.None);
+                    strLocal = new FileStream(txtarma1.Text + "\\"+name+".zip", FileMode.Create, FileAccess.Write, FileShare.None);
 
                     int bytesSize = 0;
                     byte[] downBuffer = new byte[2048];
