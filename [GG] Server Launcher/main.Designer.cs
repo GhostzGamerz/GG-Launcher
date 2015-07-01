@@ -85,6 +85,9 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.lbldownload = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.Panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -94,6 +97,7 @@
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // Panel3
@@ -107,7 +111,7 @@
             this.Panel3.Controls.Add(this.Button2);
             this.Panel3.Location = new System.Drawing.Point(-1, 0);
             this.Panel3.Name = "Panel3";
-            this.Panel3.Size = new System.Drawing.Size(752, 32);
+            this.Panel3.Size = new System.Drawing.Size(758, 32);
             this.Panel3.TabIndex = 51;
             this.Panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel3_MouseDown);
             // 
@@ -117,7 +121,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(682, 0);
+            this.button1.Location = new System.Drawing.Point(688, 0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(39, 31);
             this.button1.TabIndex = 53;
@@ -141,7 +145,7 @@
             this.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Button4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button4.ForeColor = System.Drawing.Color.White;
-            this.Button4.Location = new System.Drawing.Point(652, 0);
+            this.Button4.Location = new System.Drawing.Point(658, 0);
             this.Button4.Name = "Button4";
             this.Button4.Size = new System.Drawing.Size(28, 35);
             this.Button4.TabIndex = 51;
@@ -154,7 +158,7 @@
             this.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Button2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button2.ForeColor = System.Drawing.Color.White;
-            this.Button2.Location = new System.Drawing.Point(716, 1);
+            this.Button2.Location = new System.Drawing.Point(722, 1);
             this.Button2.Name = "Button2";
             this.Button2.Size = new System.Drawing.Size(32, 31);
             this.Button2.TabIndex = 50;
@@ -173,7 +177,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-1, 39);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(752, 32);
+            this.panel1.Size = new System.Drawing.Size(758, 32);
             this.panel1.TabIndex = 52;
             // 
             // btn_mods
@@ -309,7 +313,7 @@
             this.panel2.Controls.Add(this.label5);
             this.panel2.Location = new System.Drawing.Point(-2, 475);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(752, 32);
+            this.panel2.Size = new System.Drawing.Size(758, 32);
             this.panel2.TabIndex = 83;
             // 
             // label6
@@ -712,12 +716,45 @@
             this.textBox2.Size = new System.Drawing.Size(234, 303);
             this.textBox2.TabIndex = 88;
             // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.lbldownload);
+            this.panel8.Controls.Add(this.label13);
+            this.panel8.Location = new System.Drawing.Point(0, 65);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(750, 30);
+            this.panel8.TabIndex = 88;
+            this.panel8.Visible = false;
+            // 
+            // lbldownload
+            // 
+            this.lbldownload.AutoSize = true;
+            this.lbldownload.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbldownload.ForeColor = System.Drawing.Color.Green;
+            this.lbldownload.Location = new System.Drawing.Point(166, 8);
+            this.lbldownload.Name = "lbldownload";
+            this.lbldownload.Size = new System.Drawing.Size(18, 18);
+            this.lbldownload.TabIndex = 90;
+            this.lbldownload.Text = "--";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(3, 8);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(157, 18);
+            this.label13.TabIndex = 89;
+            this.label13.Text = "Currently downloading :";
+            // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(749, 507);
+            this.ClientSize = new System.Drawing.Size(755, 507);
+            this.Controls.Add(this.panel8);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
@@ -747,6 +784,8 @@
             this.panel6.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -809,6 +848,9 @@
         private System.Windows.Forms.DataGridViewButtonColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lbldownload;
     }
 }
 

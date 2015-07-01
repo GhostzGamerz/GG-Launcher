@@ -60,6 +60,7 @@ namespace _GG__Server_Launcher
         {
 
             comboBox1.Visible = false;
+            dataGridView1.Columns[3].Visible = false;
 
             panel5.Visible = true;
             panel6.Visible = false;
@@ -156,6 +157,7 @@ namespace _GG__Server_Launcher
             panel5.Visible =false;
             panel6.Visible = true;
             panel7.Visible = false;
+            panel8.Visible = false;
 
         }
 
@@ -203,6 +205,7 @@ namespace _GG__Server_Launcher
             panel5.Visible = true;
             panel6.Visible = false;
             panel7.Visible = false;
+            panel8.Visible = false;
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -468,11 +471,13 @@ namespace _GG__Server_Launcher
             panel5.Visible = false;
             panel6.Visible = false;
             panel7.Visible = true;
+            panel8.Visible = false;
         }
 
         string flink = "";
         int frow;
         string name;
+        string rowbutton;
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -485,13 +490,18 @@ namespace _GG__Server_Launcher
                 {
                     link = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[5].Value.ToString();
                     name = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[0].Value.ToString();
+                    rowbutton = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[4].Value.ToString();
+
                     row = dataGridView1.CurrentRow.Index;
 
                     flink = link;
                     row = frow;
 
+                    panel8.Visible = true;
                     thrDownload = new Thread(Download);
                     thrDownload.Start();
+
+                    dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[4].Value = "Cancel";
                 }
             }
             catch
@@ -503,8 +513,8 @@ namespace _GG__Server_Launcher
         private void UpdateProgress(Int64 BytesRead, Int64 TotalBytes)
         {
             // Calculate the download progress in percentages
-            PercentProgress = Convert.ToInt32((BytesRead * 100) / TotalBytes);
-            dataGridView1.Rows[frow].Cells[3].Value = "Downloaded " + BytesRead + " out of " + TotalBytes + " (" + PercentProgress + "%)";
+            PercentProgress = Convert.ToInt32((BytesRead/1024*100) / TotalBytes);
+            lbldownload.Text = name + " -" + BytesRead/1024 + "KB in " + TotalBytes/1024 + " MB (" + PercentProgress + "%)";
         }
 
         private void Download()
