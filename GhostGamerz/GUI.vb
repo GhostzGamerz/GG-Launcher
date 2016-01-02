@@ -4237,9 +4237,9 @@ Class SpaceSplashScreen
         Dim ypos2 As Integer = (ParentForm.Height - (TextRenderer.MeasureText("Developed by Kieran Devlin © 2015", New Font(CustomFont.Font, 14)).Height / 2)) - 15
         'MsgBox(TextRenderer.MeasureText("Developed by Kieran Devlin © 2015", New Font(CustomFont.Font, 14)).Width)
 
-        G.DrawString("Ghostz", New Font(CustomFont.Font, 49), Brushes.DeepSkyBlue, New Point(15, 67))
-        G.DrawString("Gamerz", New Font(CustomFont.Font, 49), Brushes.Gray, New Point(180, 67))
-        G.DrawString("Developed by Devvo © 2015", New Font(CustomFont.Font, 8), Brushes.White, New Point(140, 176))
+        G.DrawString("Server", New Font(CustomFont.Font, 45), Brushes.DeepSkyBlue, New Point(15, 67))
+        G.DrawString("Launcher", New Font(CustomFont.Font, 45), Brushes.Gray, New Point(180, 67))
+        G.DrawString("By [GG] Ghostz Gamerz", New Font(CustomFont.Font, 20), Brushes.White, New Point(90, 150))
     End Sub
 
     Protected Overrides Sub ColorHook()

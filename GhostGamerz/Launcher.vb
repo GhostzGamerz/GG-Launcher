@@ -10,7 +10,7 @@ Imports System.Text.RegularExpressions
 
 Public Class Launcher
 
-    Dim version As Double = "0.71"
+    Dim version As Double = "0.74"
 
     Dim selectedMapName As String
     Dim selectedTab As Integer = 0
@@ -29,8 +29,9 @@ Public Class Launcher
 
     Dim MapType As String = "A2"
 
-    Dim serverAddress As String = "192.99.46.157"
-    Dim baseServer As String = serverAddress + "/server_status/"
+    Dim serverAddress As String = "158.69.188.114"
+    Dim baseServer As String = "http://" + serverAddress + "/server_status/"
+
 
     'Mod name, gg launcher prefix, dayz launcher prefix, Download Link 
     Public ModList As ModContainer() = {
@@ -82,7 +83,7 @@ Public Class Launcher
             WC.Proxy = Nothing
             Dim updateServer As Double = WC.DownloadString(baseServer & "launcher/update.txt")
             If Not updateServer <= version Then
-                Dim update As New OKMsgboxWindow("New Version", 0, "There is a newer version of the launcher. Go to the GhostzGamerz website to download it.")
+                Dim update As New OKMsgboxWindow("New Version", 0, "You are using an outdated version of the launcher. Go to the www.ghostzgamerz.com to download the latest version.")
                 update.ShowDialog()
                 End
             End If
@@ -109,7 +110,7 @@ Public Class Launcher
         AddControl(l, ServerScrollPanel)
         SetLocation(New Point((GetSize(ServerScrollPanel).Width / 2) - (l.Width / 2), 10), l)
 
-        'loadMaps(WC.DownloadString(baseServer & "serverdata.php"))
+        loadMaps(WC.DownloadString(baseServer & "serverdata.php"))
     End Sub
 
     Sub loadMaps(ByVal rawdata As String)
@@ -356,7 +357,7 @@ Public Class Launcher
     Private Sub UITabs_SelectedIndexChanged(sender As Object, e As EventArgs) Handles UITabs.SelectedIndexChanged
         If UITabs.SelectedTab.Text = "About" Then
             UITabs.SelectedIndex = selectedTab
-            Dim msg As New OKMsgboxWindow("About", 0, "GhostzGamerz launcher v" & version & " designed in .NET" + vbNewLine + "GhostGamerz © 2015" + vbNewLine + vbNewLine + "Credit to Devvo")
+            Dim msg As New OKMsgboxWindow("About", 0, "Server launcher v" & version & " designed in .NET" + vbNewLine + "[GG] Ghostz Gamerz © 2015" + vbNewLine + vbNewLine + "Developed by Devvo")
             msg.Height += 10
             msg.ShowDialog()
         End If

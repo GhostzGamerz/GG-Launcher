@@ -134,7 +134,7 @@ Partial Class Launcher
         Me.UITheme.Size = New System.Drawing.Size(482, 593)
         Me.UITheme.SmartBounds = True
         Me.UITheme.TabIndex = 0
-        Me.UITheme.Text = "[GG] GhostzGamers Launcher"
+        Me.UITheme.Text = "[GG] Ghostz Gamerz Launcher"
         Me.UITheme.TitleForeColour = System.Drawing.Color.White
         Me.UITheme.TransparencyKey = System.Drawing.Color.DeepPink
         Me.UITheme.Transparent = False
