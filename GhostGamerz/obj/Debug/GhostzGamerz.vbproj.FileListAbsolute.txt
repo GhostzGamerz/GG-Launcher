@@ -1,0 +1,15 @@
+c:\users\devvo\documents\visual studio 2013\Projects\GhostGamerz\GhostGamerz\obj\Debug\GhostGamerz.Resources.resources
+c:\users\devvo\documents\visual studio 2013\Projects\GhostGamerz\GhostGamerz\obj\Debug\GhostzGamerz.vbproj.GenerateResource.Cache
+c:\users\devvo\documents\visual studio 2013\Projects\GhostGamerz\GhostGamerz\bin\Debug\GhostGamerz.exe
+c:\users\devvo\documents\visual studio 2013\Projects\GhostGamerz\GhostGamerz\bin\Debug\GhostGamerz.pdb
+c:\users\devvo\documents\visual studio 2013\Projects\GhostGamerz\GhostGamerz\bin\Debug\GhostGamerz.xml
+c:\users\devvo\documents\visual studio 2013\Projects\GhostGamerz\GhostGamerz\obj\Debug\GhostGamerz.exe
+c:\users\devvo\documents\visual studio 2013\Projects\GhostGamerz\GhostGamerz\obj\Debug\GhostGamerz.xml
+c:\users\devvo\documents\visual studio 2013\Projects\GhostGamerz\GhostGamerz\obj\Debug\GhostGamerz.pdb
+c:\users\devvo\documents\visual studio 2013\Projects\GhostGamerz\GhostGamerz\obj\Debug\GhostGamerz.Splash.resources
+c:\users\devvo\documents\visual studio 2013\Projects\GhostGamerz\GhostGamerz\obj\Debug\GhostGamerz.Launcher.resources
+C:\Users\Devvo\Documents\Visual Studio 2013\Projects\GhostGamerz\GhostGamerz\obj\Debug\GhostGamerz.OKMsgboxWindow.resources
+C:\Users\Devvo\Documents\Visual Studio 2013\Projects\GhostGamerz\GhostGamerz\bin\Debug\GhostGamerz.exe.config
+C:\Users\Devvo\Documents\Visual Studio 2013\Projects\GhostGamerz\GhostGamerz\obj\Debug\GhostGamerz.ImportMaps.resources
+C:\Users\Devvo\Documents\Visual Studio 2013\Projects\GhostGamerz\GhostGamerz\obj\Debug\GhostzGamerz.vbprojResolveAssemblyReference.cache
+C:\Users\Devvo\Documents\Visual Studio 2013\Projects\GhostGamerz\GhostGamerz\obj\Debug\GhostGamerz.AlreadyRunning.resources
