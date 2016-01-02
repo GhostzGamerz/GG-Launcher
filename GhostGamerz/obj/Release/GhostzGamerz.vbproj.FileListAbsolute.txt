@@ -13,3 +13,18 @@ C:\Users\Devvo\Documents\Visual Studio 2013\Projects\GhostGamerz\GhostGamerz\obj
 C:\Users\Devvo\Documents\Visual Studio 2013\Projects\GhostGamerz\GhostGamerz\obj\Release\GhostGamerz.ImportMaps.resources
 C:\Users\Devvo\Documents\Visual Studio 2013\Projects\GhostGamerz\GhostGamerz\obj\Release\GhostGamerz.AlreadyRunning.resources
 C:\Users\Devvo\Documents\Visual Studio 2013\Projects\GhostGamerz\GhostGamerz\obj\Release\GhostzGamerz.vbprojResolveAssemblyReference.cache
+D:\Scripts\GG-Launcher\GhostGamerz\bin\Release\GhostGamerz.exe.config
+D:\Scripts\GG-Launcher\GhostGamerz\obj\Release\GhostGamerz.exe
+D:\Scripts\GG-Launcher\GhostGamerz\obj\Release\GhostGamerz.xml
+D:\Scripts\GG-Launcher\GhostGamerz\obj\Release\GhostGamerz.pdb
+D:\Scripts\GG-Launcher\GhostGamerz\bin\Release\GhostGamerz.exe
+D:\Scripts\GG-Launcher\GhostGamerz\bin\Release\GhostGamerz.pdb
+D:\Scripts\GG-Launcher\GhostGamerz\bin\Release\GhostGamerz.xml
+D:\Scripts\GG-Launcher\GhostGamerz\obj\Release\GhostzGamerz.vbprojResolveAssemblyReference.cache
+D:\Scripts\GG-Launcher\GhostGamerz\obj\Release\GhostGamerz.AlreadyRunning.resources
+D:\Scripts\GG-Launcher\GhostGamerz\obj\Release\GhostGamerz.ImportMaps.resources
+D:\Scripts\GG-Launcher\GhostGamerz\obj\Release\GhostGamerz.Launcher.resources
+D:\Scripts\GG-Launcher\GhostGamerz\obj\Release\GhostGamerz.Resources.resources
+D:\Scripts\GG-Launcher\GhostGamerz\obj\Release\GhostGamerz.OKMsgboxWindow.resources
+D:\Scripts\GG-Launcher\GhostGamerz\obj\Release\GhostGamerz.Splash.resources
+D:\Scripts\GG-Launcher\GhostGamerz\obj\Release\GhostzGamerz.vbproj.GenerateResource.Cache

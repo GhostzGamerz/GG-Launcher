@@ -29,7 +29,7 @@ Public Class Launcher
 
     Dim MapType As String = "A2"
 
-    Dim serverAddress As String = "192.99.38.184"
+    Dim serverAddress As String = "192.99.46.157"
     Dim baseServer As String = serverAddress + "/server_status/"
 
     'Mod name, gg launcher prefix, dayz launcher prefix, Download Link 
@@ -38,7 +38,10 @@ Public Class Launcher
         New ModContainer("Taviana", "@Taviana", "@Taviana", 2, "http://ghostzgamerz.com/downloads/A2MODS/@Taviana.zip"),
         New ModContainer("Epoch", "@DayZ_Epoch1051", "@DayZ_Epoch1051", 2, "http://ghostzgamerz.com/downloads/A2MODS/@DayzEpoch.zip"),
         New ModContainer("Overwatch", "@DayzOverwatch", "@DayzOverwatch", 2, "http://ghostzgamerz.com/downloads/A2MODS/@DayzOverwatch.zip"),
-        New ModContainer("Exile", "@Exile", "@Exile", 3, "http://ghostzgamerz.com/downloads/A3MODS/@Exile.zip")
+        New ModContainer("Exile", "@Exile", "@Exile", 3, "http://ghostzgamerz.com/downloads/A3MODS/@Exile.zip"),
+        New ModContainer("RHS : RU", "@RHSAFRF", "@RHSAFRF", 4, "http://ghostzgamerz.com/downloads/A3MODS/@RHSAFRF.zip"),
+        New ModContainer("RHS : US", "@RHSUSAF", "@RHSUSAF", 5, "http://ghostzgamerz.com/downloads/A3MODS/@RHSUSAF.zip"),
+        New ModContainer("AllInArmaTerrainPack", "@AllInArmaTerrainPack", "@AllInArmaTerrainPack", 6, "http://ghostzgamerz.com/downloads/A3MODS/@AllInArmaTerrainPack.zip")
     }
 
     Public ArmaLocationArray As New DIRContainer(New String() {"program Files", "Steam", "steamapps", "common"}, New String() {"program Files (x86)", "Steam", "steamapps", "common"})
